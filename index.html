@@ -2,7 +2,6 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <!-- Viewport Fixed to 1280px to force Desktop Mode on Mobile -->
     <meta name="viewport" content="width=1280">
     <title>Apex Option Trading Research - Apoorva Sharma | Premium Index Options</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,9 +62,9 @@
         .goog-te-gadget-simple {
             background-color: #fff !important;
             border: 1px solid #e2e8f0 !important;
-            padding: 4px 10px !important; /* Smaller padding */
+            padding: 8px 16px !important;
             border-radius: 9999px !important;
-            font-size: 12px !important; /* Smaller font */
+            font-size: 14px !important;
             display: inline-block;
             cursor: pointer;
             transition: all 0.3s;
@@ -74,7 +73,7 @@
         body { top: 0 !important; }
         .goog-te-banner-frame { display: none !important; }
 
-        /* 3D Button Styles */
+        /* 3D Button Styles - Now with Gradients */
         .btn-3d {
             transition: all 0.1s;
             border-bottom-width: 6px;
@@ -103,7 +102,7 @@
             background-size: 40px 40px;
         }
         
-        /* Updated Gradient Text */
+        /* Updated Gradient Text for Colorful Effect */
         .gradient-text {
             background: linear-gradient(to right, #ef4444, #f59e0b, #10b981, #06b6d4, #3b82f6, #8b5cf6, #ec4899);
             -webkit-background-clip: text;
@@ -136,11 +135,12 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Security CSS */
+        /* Security CSS: Prevents users from clicking top-right popout area easily */
         .video-secure-container {
             position: relative;
             overflow: hidden;
         }
+        /* Invisible layer to shield the top bar of Google Drive embed */
         .popout-shield {
             position: absolute;
             top: 0;
@@ -155,12 +155,13 @@
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden font-sans">
 
-    <!-- Navbar -->
+    <!-- Navbar with Glass Effect -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Left Side -->
-                <div class="flex items-center gap-6"> 
+                <!-- Left Side: Profile & WhatsApp Button -->
+                <div class="flex items-center gap-6"> <!-- Increased gap here -->
+                    <!-- Profile DP & Info (Replaces Logo) -->
                     <div class="flex items-center gap-3">
                         <img src="https://drive.google.com/thumbnail?id=1fXpD1HHenPzj9bsK7cgWYO4_30d73Ql_&sz=w200" alt="Apoorva Sharma" class="w-12 h-12 rounded-full border-2 border-bull-600 object-cover shadow-md">
                         <div class="hidden sm:block leading-tight">
@@ -169,12 +170,14 @@
                         </div>
                     </div>
                     
+                    <!-- Join Free WhatsApp Group Button - NEW TRANSPARENT BEAUTIFUL DESIGN -->
                     <a href="https://wa.me/919257444046?text=I%20M%20interested%20Tu%20join%20your%20free%20group" target="_blank" class="px-5 py-2 rounded-full font-bold flex items-center gap-2 text-xs md:text-sm border-2 border-green-500/80 bg-transparent text-green-600 hover:bg-green-50 hover:border-green-600 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300">
                         <i class="fab fa-whatsapp text-lg animate-pulse"></i> Join Free WhatsApp Group
                     </a>
                 </div>
 
                 <!-- Desktop Menu -->
+                <!-- Changed space-x-8 to gap-8 for cleaner spacing and added ml-auto/pl-8 to separate from left side -->
                 <div class="hidden md:flex items-center gap-10">
                     <a href="#home" class="font-bold text-slate-600 hover:text-bull-600 transition">Home</a>
                     <a href="#about" class="font-bold text-slate-600 hover:text-bull-600 transition">About</a>
@@ -190,23 +193,24 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Updated: Compact & Right Translate Button) -->
-    <!-- Reduced padding (py-32 -> py-20) for compact look -->
-    <section id="home" class="bg-grid-pattern flex flex-col justify-center py-20 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-cyan-50">
+    <!-- Hero Section with 3D Design -->
+    <section id="home" class="bg-grid-pattern min-h-screen flex flex-col justify-center pt-32 pb-32 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-cyan-50">
         
+        <!-- Decorative Blobs -->
         <div class="absolute top-20 right-0 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl -z-10 animate-float"></div>
         <div class="absolute bottom-20 left-0 w-72 h-72 bg-cyan-400/30 rounded-full blur-3xl -z-10"></div>
         <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl -z-10 transform -translate-x-1/2 -translate-y-1/2"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 relative z-10">
 
-             <!-- GOOGLE TRANSLATE WIDGET MOVED TO TOP RIGHT ABSOLUTE -->
-             <div class="absolute top-0 right-4 z-50 transform scale-90 origin-top-right opacity-90 hover:opacity-100 transition-opacity">
-                <div id="google_translate_element"></div>
-             </div>
+              <!-- GOOGLE TRANSLATE WIDGET ADDED HERE -->
+                <div class="mb-5 inline-block">
+                    <div id="google_translate_element"></div>
+                </div>
+                <br>
              
-             <!-- Full Width Title Section -->
-             <div class="text-center lg:text-left mb-8 w-full mt-8">
+             <!-- Full Width Title Section (Moved out of grid) -->
+             <div class="text-center lg:text-left mb-10 w-full">
                 <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-blue-100 shadow-md transform hover:scale-105 transition-transform cursor-default mb-6">
                     <span class="relative flex h-3 w-3">
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -215,14 +219,15 @@
                     <span class="text-xs font-bold tracking-wide text-slate-700 uppercase">SEBI Registered: <span class="text-bull-600">INH000089203</span></span>
                 </div>
 
+                <!-- Main Heading in One Line - Colorful -->
                 <h1 class="font-black leading-tight text-slate-900 drop-shadow-sm w-full block">
                     <span class="gradient-text text-[5.5vw] sm:text-[4.5vw] lg:text-[4rem] tracking-wide uppercase block">APEX OPTION TRADING RESEARCH</span>
                 </h1>
             </div>
 
-            <!-- Content Grid -->
-            <div class="grid lg:grid-cols-2 gap-10 items-start">
-                <div class="space-y-6 text-center lg:text-left relative z-10">
+            <!-- Content Grid (Description Left, Image Right) -->
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <div class="space-y-8 text-center lg:text-left relative z-10">
                     
                     <p class="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
                         Join India's Most Trusted <strong>Premium Group</strong> led by Apoorva Sharma. Hum provide karte hain <strong>Nifty & Bank Nifty</strong> ke sure-shot levels with 90% accuracy.
@@ -233,13 +238,15 @@
                             Start Profit Journey <i class="fas fa-arrow-right"></i>
                         </a>
                         
+                        <!-- Join Premium Group Button - Reverted to WhatsApp Green Style -->
                         <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-3d bg-gradient-to-r from-green-500 to-emerald-600 border-green-700 text-white px-8 py-4 rounded-2xl font-bold text-xl flex items-center justify-center gap-3 hover:from-green-400 hover:to-emerald-500 shadow-xl hover:shadow-green-200 transition-all relative overflow-hidden group">
+                             <!-- Shine effect container -->
                             <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                             <i class="fab fa-whatsapp text-4xl"></i> <span class="relative z-10 font-black">Join Premium Group</span>
                         </a>
                     </div>
 
-                    <div class="pt-6 flex justify-center lg:justify-start gap-12">
+                    <div class="pt-8 flex justify-center lg:justify-start gap-12">
                         <div class="text-center lg:text-left">
                             <h4 class="text-3xl font-black text-bull-800">12k+</h4>
                             <p class="text-sm text-bull-600 font-bold bg-blue-100 px-2 py-1 rounded mt-1">Premium Members</p>
@@ -251,11 +258,12 @@
                     </div>
                 </div>
 
-                <!-- 3D Hero Visual - Compact Height -->
+                <!-- 3D Hero Visual -->
                 <div class="relative hidden lg:block perspective-1000">
                     <div class="relative z-10 bg-white p-3 rounded-3xl border-4 border-bull-100 shadow-[20px_20px_0px_0px_rgba(37,99,235,0.2)] transform rotate-2 hover:rotate-0 transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&q=80&w=800" alt="Trading Screen" class="rounded-2xl w-full object-cover h-[400px]"> <!-- Height Reduced -->
+                        <img src="https://images.unsplash.com/photo-1611974765270-ca12586343bb?auto=format&fit=crop&q=80&w=800" alt="Trading Screen" class="rounded-2xl w-full object-cover h-[500px]">
                         
+                        <!-- Floating 3D Cards -->
                         <div class="absolute -left-10 top-10 bg-white p-4 rounded-xl border-2 border-green-100 shadow-xl animate-float">
                             <div class="flex items-center gap-3">
                                 <div class="bg-green-100 p-2 rounded-lg text-green-600"><i class="fas fa-arrow-up text-xl"></i></div>
@@ -280,88 +288,16 @@
             </div>
         </div>
 
+        <!-- 3D Wave Separator (Upar-Niche Design) -->
         <div class="custom-shape-divider-bottom-1698083960 pointer-events-none">
+            <!-- Shadow Layer for 3D Effect -->
              <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="absolute bottom-[-10px] left-0 z-0 opacity-20">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#60a5fa"></path>
             </svg>
+            <!-- Main Layer -->
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative z-10">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
-        </div>
-    </section>
-
-    <!-- Hall of Fame Section -->
-    <section class="py-20 bg-slate-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-bull-600/10" style="background-image: radial-gradient(#2563eb 1px, transparent 1px); background-size: 40px 40px;"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm border border-yellow-500 px-3 py-1 rounded-lg animate-pulse">Live Proof</span>
-                <h2 class="text-4xl font-black text-white mt-6 mb-4">Apex Option Hall of Fame 🏆</h2>
-                <p class="text-slate-400 text-lg">Ye hain humare recent "Jackpot Trades" jinhone clients ka capital double kiya.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-green-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">8th Jan</span>
-                        <span class="text-green-400 font-bold"><i class="fas fa-arrow-up"></i> 320% Return</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">BANKNIFTY 59700 CE</h3>
-                    <div class="flex justify-between text-slate-400 text-sm mb-4">
-                        <span>Buy: ₹120</span>
-                        <span>Sold: ₹500</span>
-                    </div>
-                    <div class="bg-green-500/20 text-green-400 p-3 rounded-lg text-center font-bold border border-green-500/50">
-                        Profit per lot: ₹5,700 💰
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-yellow-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(234,179,8,0.3)]">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">7th Jan</span>
-                        <span class="text-yellow-400 font-bold"><i class="fas fa-bolt"></i> Hero Zero</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-2">FINNIFTY 27700 PE</h3>
-                    <div class="flex justify-between text-slate-400 text-sm mb-4">
-                        <span>Buy: ₹15</span>
-                        <span>Sold: ₹65</span>
-                    </div>
-                    <div class="bg-yellow-500/20 text-yellow-400 p-3 rounded-lg text-center font-bold border border-yellow-500/50">
-                        Capital 4x in 20 Mins 🚀
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-bull-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">4th Jan</span>
-                        <span class="text-bull-400 font-bold"><i class="fas fa-chart-line"></i> Swing</span>
-                    </div>
-                    
-                    <h3 class="text-2xl font-bold text-white mb-2">NIFTY 21500 CE</h3>
-
-                    <div class="flex justify-between text-slate-400 text-sm mb-4">
-                        <span>Buy: ₹85</span>
-                        <span>Sold: ₹340</span>
-                    </div>
-
-                    <div class="bg-bull-500/20 text-bull-400 p-3 rounded-lg text-center font-bold border border-bull-500/50 mb-4">
-                        Overnight Hold: 300% Return 🔥
-                    </div>
-
-                    <div class="flex items-center gap-4 border-t border-slate-700 pt-4 relative z-10">
-                         <img src="https://drive.google.com/thumbnail?id=1UvMOujFNgEDmqHASqt-WZvW43ljmDR5j&sz=w200" class="w-12 h-12 rounded-full border-2 border-bull-500 object-cover">
-                         <div>
-                             <h5 class="font-bold text-bull-400">Apoorva Sharma</h5>
-                             <p class="text-xs text-slate-400">Founder, Apex Option Trading</p>
-                         </div>
-                    </div>
-                    
-                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-bull-600/20 rounded-full blur-2xl"></div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -414,12 +350,13 @@
         </div>
     </section>
 
-    <!-- Mentor Section -->
+    <!-- NEW SECTION 1: About Mentor (Detailed) -->
     <section id="about" class="py-20 bg-gradient-to-b from-white to-blue-50 border-t border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 relative">
                     <div class="absolute inset-0 bg-bull-600 rounded-2xl transform rotate-3 scale-95 opacity-20"></div>
+                    <!-- Updated Image Here: Using High-Res Thumbnail Link which is more reliable for direct display -->
                     <img src="https://drive.google.com/thumbnail?id=1vwCuKt0_zeIvGW85pn4WrZmX33Qyw3UZ&sz=w1000" referrerpolicy="no-referrer" class="rounded-2xl shadow-2xl border-4 border-white relative z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-300 h-[600px] w-full object-cover" alt="Apoorva Sharma">
                 </div>
                 <div class="md:w-1/2 space-y-6">
@@ -427,11 +364,11 @@
                     <h2 class="text-4xl font-black text-slate-900">Apoorva Sharma <span class="text-sm font-medium text-bull-600 block mt-2">(SEBI Registered Analyst: INH000089203)</span></h2>
                     
                     <p class="text-lg text-slate-700 leading-relaxed">
-                        With 12+ years of experience, Apoorva Sharma is one of India's top female technical analysts. She has shared her market views on <strong>CNBC Awaaz</strong> and <strong>Zee Business</strong> multiple times.
+                        12+ years of experience ke saath, Apoorva Sharma India ki top female technical analysts mein se ek hain. Unhone <strong>CNBC Awaaz</strong> aur <strong>Zee Business</strong> par kai baar apne market views share kiye hain.
                     </p>
                     
                     <p class="text-lg text-slate-700 leading-relaxed">
-                        Her trading style is a mix of "Price Action" and "Data Analysis". She believes that <strong>Making profit is easy if you maintain discipline.</strong>
+                        Unka trading style "Price Action" aur "Data Analysis" ka mixture hai. Wo maanti hain ki <strong>Profit kamana aasan hai, agar discipline rakha jaye.</strong>
                     </p>
 
                     <div class="grid grid-cols-2 gap-4 mt-6">
@@ -449,7 +386,7 @@
         </div>
     </section>
 
-    <!-- About Firm Section -->
+    <!-- NEW SECTION: About Apex Option Trading Research (Added above How It Works) -->
     <section class="py-20 bg-slate-50 border-y border-blue-200">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <div class="inline-block p-4 rounded-full bg-white border border-blue-100 text-bull-600 mb-6 shadow-sm">
@@ -477,10 +414,14 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- NEW SECTION: Our Services (Updated: Detail Top, Image Bottom Full View) -->
     <section class="py-20 bg-slate-50 border-b border-blue-200">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Single Unified Frame (Vertical Layout) -->
             <div class="bg-white rounded-[2rem] shadow-2xl border border-blue-100 overflow-hidden flex flex-col">
+                
+                <!-- Top: Text Details -->
                 <div class="p-8 md:p-12 w-full flex flex-col justify-center items-center text-center relative bg-gradient-to-b from-white via-blue-50 to-white">
                     <div class="relative z-10 w-full">
                         <span class="text-bull-600 font-bold tracking-widest uppercase text-sm bg-blue-100 px-3 py-1 rounded-lg inline-block mb-4">What We Offer</span>
@@ -489,25 +430,30 @@
                             We provide <em class="text-bull-700 font-bold">Investment Advisory Services</em> in the following index instruments:
                         </p>
                         
+                        <!-- Services Grid (2 Columns for better fit) -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
+                            <!-- Service Item 1 -->
                             <div class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm border border-blue-100 hover:border-bull-400 transition-all">
                                 <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
                                 <span class="font-bold text-slate-800 text-lg">NIFTY Options</span>
                             </div>
+                            <!-- Service Item 2 -->
                             <div class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm border border-blue-100 hover:border-bull-400 transition-all">
                                 <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
                                 <span class="font-bold text-slate-800 text-lg">BANKNIFTY Options</span>
                             </div>
+                            <!-- Service Item 3 -->
                             <div class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm border border-blue-100 hover:border-bull-400 transition-all">
                                 <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0">
                                     <i class="fas fa-check"></i>
                                 </div>
                                 <span class="font-bold text-slate-800 text-lg">FINNIFTY Options</span>
                             </div>
+                            <!-- Service Item 4 -->
                             <div class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm border border-blue-100 hover:border-bull-400 transition-all">
                                 <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0">
                                     <i class="fas fa-check"></i>
@@ -518,24 +464,32 @@
                     </div>
                 </div>
 
+                <!-- Bottom: Image (Full Width, Tall & Complete View) -->
                 <div class="w-full relative bg-slate-900">
+                    <!-- 
+                        Updated Image: Using user's Google Drive Link
+                        ID: 1Bt_gZymXUPFl_R4MTMzPZzLvVK2tz4oZ
+                    -->
                     <img 
                         src="https://drive.google.com/thumbnail?id=1Bt_gZymXUPFl_R4MTMzPZzLvVK2tz4oZ&sz=w1000" 
                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800';"
                         alt="Our Services Analysis" 
                         class="w-full h-auto object-contain block"
                     >
+                    
+                    <!-- Floating Badge -->
                     <div class="absolute bottom-6 right-6 z-20 bg-white/95 backdrop-blur px-5 py-2 rounded-full shadow-lg border border-slate-200">
                          <span class="text-bull-800 font-bold text-sm tracking-wide flex items-center gap-2">
                             <i class="fas fa-chart-line text-green-500"></i> Live Market Analysis
                          </span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Ethical Standards -->
+    <!-- NEW SECTION: Ethical Standards (Updated Layout with Vertical Reel Video) -->
     <section class="py-16 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -544,6 +498,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Left Column: Content -->
                 <div class="bg-slate-50 rounded-2xl p-6 md:p-10 border border-slate-200 shadow-lg hover:border-bull-300 transition-colors h-full flex flex-col justify-center">
                     <ul class="space-y-6 text-lg text-slate-700 font-medium">
                         <li class="flex items-start gap-4 hover:translate-x-2 transition-transform duration-300">
@@ -565,9 +520,15 @@
                     </ul>
                 </div>
 
+                <!-- Right Column: Vertical Video Frame (Instagram Reel Size 9:16) -->
                 <div class="flex justify-center md:justify-center">
                     <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                        <!-- Camera Notch Removed as requested -->
+                        
+                        <!-- Mask to block Pop-out button -->
                         <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
+                        <!-- Video Iframe -->
                         <iframe 
                             id="ethical-video"
                             src="https://drive.google.com/file/d/19B4dhj3IXUk8R0p-pAlIhnab68x4du69/preview" 
@@ -582,18 +543,21 @@
         </div>
     </section>
 
-    <!-- Investment Principles -->
+    <!-- NEW SECTION: Investment Principles (Added above How It Works) -->
     <section class="py-12 bg-slate-50 border-b border-blue-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-6 mb-10">
+                <!-- Risk Item -->
                 <div class="bg-white px-6 py-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center gap-3 hover:border-orange-300 transition-colors hover:-translate-y-1 transform duration-300">
                     <i class="fas fa-exclamation-triangle text-orange-500 text-xl"></i>
                     <span class="font-bold text-slate-700 text-lg">May involve risk</span>
                 </div>
+                <!-- Market Condition Item -->
                 <div class="bg-white px-6 py-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center gap-3 hover:border-blue-300 transition-colors hover:-translate-y-1 transform duration-300">
                     <i class="fas fa-chart-line text-blue-500 text-xl"></i>
                     <span class="font-bold text-slate-700 text-lg">Depends on market conditions</span>
                 </div>
+                <!-- Suitability Item -->
                 <div class="bg-white px-6 py-5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-center gap-3 hover:border-green-300 transition-colors hover:-translate-y-1 transform duration-300">
                     <i class="fas fa-user-check text-green-500 text-xl"></i>
                     <span class="font-bold text-slate-700 text-lg">Suitability-based advice</span>
@@ -610,13 +574,20 @@
         </div>
     </section>
 
-    <!-- Advisory Process -->
+    <!-- NEW SECTION: Advisory Process Logic (Added above How It Works) -->
     <section class="py-16 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
             <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column: Video (Insta Reel Size 9:16) -->
                 <div class="flex justify-center md:justify-end order-2 md:order-1">
                     <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                        
+                        <!-- Mask to block Pop-out button -->
                         <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
+                        <!-- Video Iframe -->
                         <iframe 
                             id="methodology-video"
                             src="https://drive.google.com/file/d/15kEwFj1GnP36AbLtXeOKnzjKN-Wg_7e_/preview" 
@@ -628,6 +599,7 @@
                     </div>
                 </div>
 
+                <!-- Right Column: Process Details -->
                 <div class="text-left order-1 md:order-2">
                     <span class="text-bull-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-3 py-1 rounded-lg">Methodology</span>
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 mb-6">Our Advisory Process</h2>
@@ -636,22 +608,27 @@
                     </p>
 
                     <div class="space-y-4">
+                        <!-- Step 1 -->
                         <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group">
                             <div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">1</div>
                             <h4 class="font-bold text-slate-800 text-lg">Risk Assessment</h4>
                         </div>
+                        <!-- Step 2 -->
                         <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group">
                             <div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">2</div>
                             <h4 class="font-bold text-slate-800 text-lg">Capital Suitability</h4>
                         </div>
+                        <!-- Step 3 -->
                         <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group">
                             <div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">3</div>
                             <h4 class="font-bold text-slate-800 text-lg">Strategy Explanation</h4>
                         </div>
+                        <!-- Step 4 -->
                         <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group">
                             <div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">4</div>
                             <h4 class="font-bold text-slate-800 text-lg">Advisory Delivery</h4>
                         </div>
+                        <!-- Step 5 -->
                         <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group">
                             <div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">5</div>
                             <h4 class="font-bold text-slate-800 text-lg">Review & Discipline</h4>
@@ -662,13 +639,14 @@
         </div>
     </section>
 
-    <!-- Core Commitment -->
+    <!-- NEW SECTION: Our Core Commitment (Added above How It Works) -->
     <section class="py-16 bg-white border-b border-blue-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <span class="text-green-600 font-bold tracking-widest uppercase text-sm bg-green-50 px-3 py-1 rounded-lg">Trust & Integrity</span>
             <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 mb-10">Our Core Commitment</h2>
             
             <div class="space-y-6">
+                <!-- Point 1 -->
                 <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 transition-colors group">
                     <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-shield-alt text-xl"></i>
@@ -676,6 +654,7 @@
                     <p class="text-lg text-slate-700 font-medium text-left">We prioritize capital protection over aggressive returns.</p>
                 </div>
                 
+                <!-- Point 2 -->
                 <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 transition-colors group">
                     <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-search-plus text-xl"></i>
@@ -683,6 +662,7 @@
                     <p class="text-lg text-slate-700 font-medium text-left">Transparency and suitability come before growth.</p>
                 </div>
 
+                <!-- Point 3 -->
                 <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-blue-50 transition-colors group">
                     <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform">
                         <i class="fas fa-hand-holding-heart text-xl"></i>
@@ -700,24 +680,208 @@
         </div>
     </section>
 
-    <!-- How It Works (Process) -->
+    <!-- NEW SECTION: Focus & Ethics (Split Layout) -->
+    <section class="py-16 bg-slate-50 border-b border-blue-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Side: Process Details (Original Text Content) -->
+                <div>
+                     <!-- Focus Quote -->
+                    <div class="mb-10 relative">
+                        <div class="absolute top-0 left-0 -translate-y-1/2 w-24 h-1 bg-bull-500 rounded-full"></div>
+                        <h2 class="text-2xl font-bold text-slate-800 italic leading-relaxed">
+                            "Our focus is not to impress clients, but to protect them from unrealistic expectations."
+                        </h2>
+                    </div>
+
+                    <span class="text-bull-600 font-bold tracking-widest uppercase text-sm bg-blue-100 px-3 py-1 rounded-lg">Code of Conduct</span>
+                    <h3 class="text-3xl font-black text-slate-900 mt-4 mb-8">Our Ethics</h3>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Item 1 -->
+                        <div class="bg-white p-5 rounded-xl border border-red-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition-colors text-red-500">
+                                <i class="fas fa-bullhorn text-lg"></i>
+                            </div>
+                            <p class="font-bold text-slate-700">No fake marketing</p>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="bg-white p-5 rounded-xl border border-red-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition-colors text-red-500">
+                                <i class="fas fa-hand-paper text-lg"></i>
+                            </div>
+                            <p class="font-bold text-slate-700">No pressure selling</p>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="bg-white p-5 rounded-xl border border-red-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group">
+                            <div class="w-10 h-10 bg-red-50 rounded-full flex items-center justify-center mb-3 group-hover:bg-red-500 group-hover:text-white transition-colors text-red-500">
+                                <i class="fas fa-percent text-lg"></i>
+                            </div>
+                            <p class="font-bold text-slate-700">No profit guarantees</p>
+                        </div>
+                        <!-- Item 4 (Positive) -->
+                        <div class="bg-white p-5 rounded-xl border border-green-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all group border-b-4 border-b-green-500">
+                            <div class="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center mb-3 group-hover:bg-green-500 group-hover:text-white transition-colors text-green-600">
+                                <i class="fas fa-user-check text-lg"></i>
+                            </div>
+                            <p class="font-bold text-slate-900">Client suitability first</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Video -->
+                <div class="flex justify-center w-full">
+                    <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300 mx-auto">
+                        
+                        <!-- Mask to block Pop-out button -->
+                        <div class="absolute top-0 right-0 w-24 h-24 z-20"></div>
+
+                        <iframe 
+                            id="ethical-video"
+                            src="https://drive.google.com/file/d/19B4dhj3IXUk8R0p-pAlIhnab68x4du69/preview" 
+                            class="absolute inset-0 w-full h-full object-cover"
+                            allow="autoplay; encrypted-media; fullscreen"
+                            title="Our Ethics Video"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Advisory Fee Structure (Added above How It Works) -->
+    <section class="py-16 bg-white border-b border-blue-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-bull-600 font-bold tracking-widest uppercase text-sm bg-blue-50 px-3 py-1 rounded-lg">Fair Pricing</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 mb-8">Advisory Fee Structure</h2>
+            <p class="text-xl text-slate-600 font-medium max-w-3xl mx-auto mb-10 leading-relaxed">
+                Our advisory fees are charged strictly as per <span class="text-bull-700 font-bold bg-blue-100 px-2 py-0.5 rounded">SEBI RIA guidelines</span>.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <!-- Fee Item 1 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-bull-300 transition-colors group">
+                     <div class="w-12 h-12 rounded-full bg-white border border-bull-200 flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-file-invoice-dollar text-xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 text-lg text-left">Fee Model: (Flat Fee)</span>
+                </div>
+                 <!-- Fee Item 2 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-bull-300 transition-colors group">
+                     <div class="w-12 h-12 rounded-full bg-white border border-bull-200 flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-bullhorn text-xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 text-lg text-left">Transparently communicated before onboarding</span>
+                </div>
+                 <!-- Fee Item 3 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-bull-300 transition-colors group">
+                     <div class="w-12 h-12 rounded-full bg-white border border-bull-200 flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-ban text-xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 text-lg text-left">No hidden charges</span>
+                </div>
+                 <!-- Fee Item 4 -->
+                <div class="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-bull-300 transition-colors group">
+                     <div class="w-12 h-12 rounded-full bg-white border border-bull-200 flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-handshake-slash text-xl"></i>
+                    </div>
+                    <span class="font-bold text-slate-700 text-lg text-left">No commission from brokers or third parties</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Featured Reels (Added below Advisory Fee Structure) -->
+    <section class="py-20 bg-slate-50 border-b border-blue-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                 <span class="text-bull-600 font-bold tracking-widest uppercase text-sm bg-blue-100 px-3 py-1 rounded-lg">Live Insights</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4">Market Wisdom in Short</h2>
+                <p class="text-slate-500 mt-2 text-lg">Quick tips aur market updates ke liye humein follow karein.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 justify-items-center">
+                <!-- Video 1 -->
+                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
+                    <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
+                    <iframe 
+                        id="reel-video-1"
+                        src="https://drive.google.com/file/d/1vXHVbcuDbzOiL3bOwwe9oQqoIg67afqW/preview" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        title="Market Insight 1"
+                        frameborder="0">
+                    </iframe>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
+                    <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
+                    <iframe 
+                        id="reel-video-2"
+                        src="https://drive.google.com/file/d/1oUk5G5RSjr34IkkCirDkyi_SYMUSp8Tt/preview" 
+                        class="absolute inset-0 w-full h-full object-cover"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        title="Market Insight 2"
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Declaration (Added above How It Works) -->
+    <section class="py-16 bg-white border-b border-blue-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-slate-500 font-bold tracking-widest uppercase text-sm bg-slate-100 px-3 py-1 rounded-lg">Transparency</span>
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mt-4 mb-8">Declaration</h2>
+            
+            <div class="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 max-w-3xl mx-auto shadow-sm hover:shadow-md transition-shadow">
+                <div class="flex flex-col md:flex-row items-center gap-6 justify-center">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-yellow-600 shadow-sm flex-shrink-0 border border-yellow-100">
+                        <i class="fas fa-info-circle text-3xl"></i>
+                    </div>
+                    <p class="text-xl text-slate-800 font-bold leading-relaxed text-center md:text-left">
+                        We are <span class="text-red-600 underline decoration-red-300 decoration-2 underline-offset-4">not affiliated</span> with any stock broker, mutual fund distributor, or insurance company.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 2: How It Works (Process) -->
     <section id="process" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
+            <!-- NEW FRAME CONTAINER -->
             <div class="relative bg-white rounded-[2.5rem] border-[6px] border-bull-100 p-6 md:p-12 shadow-2xl overflow-hidden group-container">
                 
+                <!-- Decorative Frame Corners -->
                 <div class="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 border-t-[12px] border-l-[12px] border-bull-500 rounded-tl-[2rem] z-0"></div>
                 <div class="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 border-t-[12px] border-r-[12px] border-bull-500 rounded-tr-[2rem] z-0"></div>
                 <div class="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 border-b-[12px] border-l-[12px] border-bull-500 rounded-bl-[2rem] z-0"></div>
                 <div class="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 border-b-[12px] border-r-[12px] border-bull-500 rounded-br-[2rem] z-0"></div>
 
+                <!-- Background Subtle Pattern -->
                 <div class="absolute inset-0 bg-[radial-gradient(#eff6ff_1px,transparent_1px)] [background-size:20px_20px] opacity-50"></div>
 
                 <div class="relative z-10">
+                    <!-- HEADING STRIP (Inside Frame) -->
                     <div class="flex justify-center mb-16">
                         <div class="relative group cursor-default transform hover:scale-105 transition-transform duration-300">
+                            <!-- Golden Metallic Glow Effect -->
                             <div class="absolute -inset-1 bg-gradient-to-r from-yellow-300 via-amber-500 to-yellow-600 rounded-xl blur opacity-85 group-hover:opacity-100 transition duration-1000 animate-pulse-slow"></div>
                             
+                            <!-- Main Golden Strip Content -->
                             <div class="relative bg-gradient-to-r from-amber-400 via-yellow-100 to-amber-500 px-6 py-4 md:px-12 md:py-6 rounded-xl leading-none flex flex-col md:flex-row items-center gap-4 md:gap-6 shadow-[0_10px_30px_rgba(180,140,20,0.4)] border-2 border-white/40">
                                 <div class="w-14 h-14 bg-gradient-to-br from-yellow-600 to-amber-700 rounded-full flex items-center justify-center shadow-lg border-2 border-white animate-bounce">
                                     <i class="fas fa-crown text-white text-2xl"></i>
@@ -734,9 +898,12 @@
                         </div>
                     </div>
 
+                    <!-- Steps Grid (Inside Frame) - Eye Catching Design -->
                     <div class="grid md:grid-cols-4 gap-6 relative">
+                         <!-- Connecting Line (Desktop) -->
                         <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent -z-10 border-t-2 border-dashed border-slate-300"></div>
 
+                        <!-- Step 1 -->
                         <div class="bg-white p-6 rounded-2xl border-b-8 border-bull-500 shadow-xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-bull-200/50">
                             <div class="w-24 h-24 bg-gradient-to-br from-bull-500 to-bull-700 text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto mb-4 shadow-lg ring-4 ring-bull-100 group-hover:rotate-12 transition-transform relative">
                                 1
@@ -746,6 +913,7 @@
                             <p class="text-slate-600 text-sm font-semibold">Select Monthly or Lifetime plan.</p>
                         </div>
 
+                        <!-- Step 2 -->
                         <div class="bg-white p-6 rounded-2xl border-b-8 border-purple-500 shadow-xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-purple-200/50">
                             <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-700 text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto mb-4 shadow-lg ring-4 ring-purple-100 group-hover:rotate-12 transition-transform relative">
                                 2
@@ -755,6 +923,7 @@
                             <p class="text-slate-600 text-sm font-semibold">Secure Payment via UPI/Card.</p>
                         </div>
 
+                        <!-- Step 3 -->
                         <div class="bg-white p-6 rounded-2xl border-b-8 border-accent-500 shadow-xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-accent-200/50">
                             <div class="w-24 h-24 bg-gradient-to-br from-accent-500 to-accent-700 text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto mb-4 shadow-lg ring-4 ring-accent-100 group-hover:rotate-12 transition-transform relative">
                                 3
@@ -764,6 +933,7 @@
                             <p class="text-slate-600 text-sm font-semibold">Instant Add to Premium Group.</p>
                         </div>
 
+                        <!-- Step 4 -->
                         <div class="bg-white p-6 rounded-2xl border-b-8 border-green-500 shadow-xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-green-200/50">
                             <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-700 text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto mb-4 shadow-lg ring-4 ring-green-100 group-hover:rotate-12 transition-transform relative">
                                 4
@@ -778,8 +948,9 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Pricing Section (MOVED HERE as per request) -->
     <section id="pricing" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Background decorative grid -->
         <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#06b6d4 1px, transparent 1px); background-size: 30px 30px;"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -841,7 +1012,7 @@
         </div>
     </section>
 
-    <!-- Strategy Reels -->
+    <!-- NEW SECTION: Strategy Reels (Added above Performance) -->
     <section class="py-20 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -851,8 +1022,12 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 justify-items-center">
+                <!-- Video 3 -->
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
                     <iframe 
                         id="strategy-video-1"
                         src="https://drive.google.com/file/d/1hW0vK3ydklysOC8TqaoTIu2TfZrog2eY/preview" 
@@ -863,8 +1038,12 @@
                     </iframe>
                 </div>
 
+                <!-- Video 4 -->
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
                     <iframe 
                         id="strategy-video-2"
                         src="https://drive.google.com/file/d/1tX_eAVmKX8h0qHM73P9SOHb82xLw-7_w/preview" 
@@ -878,7 +1057,7 @@
         </div>
     </section>
 
-    <!-- Performance Report -->
+    <!-- NEW SECTION 3: Performance Report Table -->
     <section class="py-20 bg-gradient-to-r from-slate-50 to-blue-50 border-y border-blue-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -939,8 +1118,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Trading Psychology -->
+       <!-- NEW SECTION: Trading Psychology Reels (Added below Performance) -->
     <section class="py-20 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -950,8 +1128,12 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 justify-items-center">
+                <!-- Psychology Video 1 -->
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
                     <iframe 
                         id="psychology-video-1"
                         src="https://drive.google.com/file/d/1I1Zdov2H8Cigvfz8czOcd2gYJP1ak3jW/preview" 
@@ -962,8 +1144,12 @@
                     </iframe>
                 </div>
 
+                <!-- Psychology Video 2 -->
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
+                    
+                    <!-- Mask to block Pop-out button -->
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
                     <iframe 
                         id="psychology-video-2"
                         src="https://drive.google.com/file/d/1Sgp1HvXoC6zHRVF4rKtcJzu2FZ3PrXKo/preview" 
@@ -976,9 +1162,9 @@
             </div>
         </div>
     </section>
-
-    <!-- Market Analysis -->
+    <!-- NEW SECTION: Market Analysis Preview (Dark Mode for contrast) -->
     <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Colored Glows -->
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-bull-600/30 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-600/30 rounded-full blur-[120px]"></div>
 
@@ -1009,6 +1195,7 @@
                 </div>
                 <div class="order-1 md:order-2">
                     <div class="relative rounded-2xl border-4 border-slate-700 overflow-hidden shadow-2xl group">
+                        <!-- Updated Image Here: Using user provided Google Drive Link -->
                         <img 
                             src="https://drive.google.com/thumbnail?id=158jqocOjEXqBuSc_yVHLVqgOoo_mhoZS&sz=w1000" 
                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&q=80&w=800';"
@@ -1026,7 +1213,7 @@
         </div>
     </section>
 
-    <!-- Risk Management -->
+    <!-- NEW SECTION 4: Risk Management Philosophy -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -1067,6 +1254,7 @@
                             "Maine dekha hai logon ko 10 din ka profit 1 din mein gawate hue kyunki unke paas risk management nahi tha. Mere group mein, capital protection humari pehli priority hai."
                         </p>
                         <div class="mt-6 flex items-center gap-4">
+                             <!-- Updated DP Here: Using Google Drive Thumbnail Link -->
                              <img 
                                 src="https://drive.google.com/thumbnail?id=1UvMOujFNgEDmqHASqt-WZvW43ljmDR5j&sz=w200" 
                                 onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Apoorva+Sharma&background=fff&color=000';"
@@ -1084,8 +1272,9 @@
         </div>
     </section>
 
-    <!-- Inside Premium Channel -->
+    <!-- NEW SECTION 5: Inside Premium Channel (Telegram Preview) -->
     <section class="py-20 bg-slate-900 overflow-hidden relative">
+        <!-- Background Glow -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[100px]"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1096,11 +1285,15 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 items-stretch justify-items-center">
+                <!-- Left Element: Telegram Mobile Preview Frame -->
                 <div class="w-full flex justify-center lg:justify-end">
                     <div class="w-full max-w-[320px] bg-[#1c2533] rounded-[3rem] border-[10px] border-slate-800 shadow-2xl overflow-hidden relative flex flex-col h-[580px]">
+                        <!-- Mobile Notch -->
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-xl z-20"></div>
                         
+                        <!-- Telegram Header -->
                         <div class="bg-[#242f3d] p-4 pt-10 flex items-center gap-3 border-b border-slate-700">
+                            <!-- Updated DP to a New Bull/Chart Image -->
                             <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=100&h=100" alt="Premium Group DP" class="w-12 h-12 rounded-full border-2 border-bull-500 object-cover shadow-lg">
                             <div>
                                 <h4 class="text-white font-bold text-sm">Apex Option Premium 💎</h4>
@@ -1108,9 +1301,12 @@
                             </div>
                         </div>
 
+                        <!-- Chat Area -->
                         <div class="flex-1 p-4 space-y-4 overflow-y-auto bg-[#0e1621] scrollbar-hide">
+                            <!-- Date -->
                             <div class="flex justify-center"><span class="bg-[#182533] text-slate-400 text-xs px-3 py-1 rounded-full">Today</span></div>
 
+                            <!-- Msg 1 -->
                             <div class="bg-[#2b5278] p-3 rounded-lg rounded-tl-none max-w-[85%] ml-0 text-white shadow-md">
                                 <p class="text-sm font-bold text-bull-300 mb-1">📢 HERO ZERO CALL</p>
                                 <p class="text-sm">Buy <span class="font-bold">FINNIFTY 27750 CE</span> @ 20-25</p>
@@ -1119,16 +1315,19 @@
                                 <p class="text-[10px] text-slate-300 text-right mt-1">10:30 AM</p>
                             </div>
 
+                            <!-- Msg 2 -->
                             <div class="bg-[#2b5278] p-3 rounded-lg rounded-tl-none max-w-[85%] ml-0 text-white shadow-md">
                                 <p class="text-sm">Safe traders enter now @ 22. Fast movement expected! 🔥</p>
                                 <p class="text-[10px] text-slate-300 text-right mt-1">10:32 AM</p>
                             </div>
 
+                            <!-- Msg 3 -->
                             <div class="bg-[#2b5278] p-3 rounded-lg rounded-tl-none max-w-[85%] ml-0 text-white shadow-md border-l-4 border-green-400">
                                 <p class="text-sm font-bold text-green-300">Target 1 Hit! 🎯 40 Done</p>
                                 <p class="text-sm">Funds doubled within 15 mins. Book partial profit and hold for Jackpot.</p>
                                 <p class="text-[10px] text-slate-300 text-right mt-1">10:45 AM</p>
                             </div>
+                              <!-- Msg 4 -->
                               <div class="bg-[#2b5278] p-3 rounded-lg rounded-tl-none max-w-[85%] ml-0 text-white shadow-md border-l-4 border-green-400">
                                 <p class="text-sm font-bold text-green-300">Boom Boom! 🚀 80 Done</p>
                                 <p class="text-sm">Capital 4x hogaya hai. Enjoy profits everyone!</p>
@@ -1136,6 +1335,7 @@
                             </div>
                         </div>
 
+                        <!-- Input Area -->
                         <div class="bg-[#242f3d] p-3 flex items-center gap-3">
                             <i class="fas fa-paperclip text-slate-500"></i>
                             <div class="flex-1 bg-[#17212b] h-8 rounded-full"></div>
@@ -1151,7 +1351,7 @@
         </div>
     </section>
 
-    <!-- Who Can Join? -->
+    <!-- NEW SECTION 6: Who Can Join? (Target Audience) -->
     <section class="py-20 bg-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -1160,6 +1360,7 @@
             </div>
 
             <div class="grid md:grid-cols-4 gap-6">
+                <!-- Card 1 -->
                 <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg transition-all text-center group hover:-translate-y-1">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-laptop-house text-2xl text-blue-600 group-hover:text-white"></i>
@@ -1168,6 +1369,7 @@
                     <p class="text-sm text-slate-500">Screen dekhne ki zarurat nahi. Alert aate hi phone se trade lo.</p>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg transition-all text-center group hover:-translate-y-1">
                     <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-600 transition-colors">
                         <i class="fas fa-home text-2xl text-pink-600 group-hover:text-white"></i>
@@ -1176,6 +1378,7 @@
                     <p class="text-sm text-slate-500">Ghar ke kaam ke saath second income source banayein.</p>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg transition-all text-center group hover:-translate-y-1">
                     <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-600 transition-colors">
                         <i class="fas fa-user-graduate text-2xl text-yellow-600 group-hover:text-white"></i>
@@ -1184,6 +1387,7 @@
                     <p class="text-sm text-slate-500">Apni pocket money se trading start karein aur independent banein.</p>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm hover:shadow-lg transition-all text-center group hover:-translate-y-1">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-chart-line text-2xl text-blue-600 group-hover:text-white"></i>
@@ -1195,7 +1399,7 @@
         </div>
     </section>
 
-    <!-- Power of Compounding -->
+    <!-- NEW SECTION 7: Power of Compounding -->
     <section class="py-20 bg-white border-b border-blue-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -1239,6 +1443,7 @@
                             <td class="p-4 text-green-600">+₹16,000</td>
                             <td class="p-4 font-bold text-bull-600">₹49,500</td>
                         </tr>
+                        <!-- Highlight Row -->
                         <tr class="bg-gradient-to-r from-bull-600 to-accent-600 text-white shadow-lg transform scale-105">
                             <td class="p-4 font-bold rounded-l-xl">Month 6</td>
                             <td class="p-4">--</td>
@@ -1252,11 +1457,85 @@
         </div>
     </section>
 
-    <!-- Awards -->
+    <!-- EXTRA IMPRESSIVE SECTIONS ADDED HERE (Before Testimonials) -->
+
+<!-- Section A: Hall of Fame (Recent Jackpots) -->
+    <section class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-bull-600/10" style="background-image: radial-gradient(#2563eb 1px, transparent 1px); background-size: 40px 40px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-yellow-400 font-bold tracking-widest uppercase text-sm border border-yellow-500 px-3 py-1 rounded-lg animate-pulse">Live Proof</span>
+                <h2 class="text-4xl font-black text-white mt-6 mb-4">Apex Option Hall of Fame 🏆</h2>
+                <p class="text-slate-400 text-lg">Ye hain humare recent "Jackpot Trades" jinhone clients ka capital double kiya.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-green-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">8th Jan</span>
+                        <span class="text-green-400 font-bold"><i class="fas fa-arrow-up"></i> 320% Return</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">BANKNIFTY 59700 CE</h3>
+                    <div class="flex justify-between text-slate-400 text-sm mb-4">
+                        <span>Buy: ₹120</span>
+                        <span>Sold: ₹500</span>
+                    </div>
+                    <div class="bg-green-500/20 text-green-400 p-3 rounded-lg text-center font-bold border border-green-500/50">
+                        Profit per lot: ₹5,700 💰
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-yellow-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(234,179,8,0.3)]">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">7th Jan</span>
+                        <span class="text-yellow-400 font-bold"><i class="fas fa-bolt"></i> Hero Zero</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">FINNIFTY 27700 PE</h3>
+                    <div class="flex justify-between text-slate-400 text-sm mb-4">
+                        <span>Buy: ₹15</span>
+                        <span>Sold: ₹65</span>
+                    </div>
+                    <div class="bg-yellow-500/20 text-yellow-400 p-3 rounded-lg text-center font-bold border border-yellow-500/50">
+                        Capital 4x in 20 Mins 🚀
+                    </div>
+                </div>
+
+                <!-- Card 3 (UPDATED: Added Missing Details) -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-bull-500 transition-all group hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">4th Jan</span>
+                        <span class="text-bull-400 font-bold"><i class="fas fa-chart-line"></i> Swing</span>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold text-white mb-2">NIFTY 21500 CE</h3>
+
+                    <!-- ADDED: Missing Buy/Sell Details -->
+                    <div class="flex justify-between text-slate-400 text-sm mb-4">
+                        <span>Buy: ₹85</span>
+                        <span>Sold: ₹340</span>
+                    </div>
+
+                    <div class="bg-bull-500/20 text-bull-400 p-3 rounded-lg text-center font-bold border border-bull-500/50 mb-4">
+                        Overnight Hold: 300% Return 🔥
+                    </div>
+                         </div>
+                    </div>
+                    
+                    <!-- Decorative Gradient Background -->
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-bull-600/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section B: Awards & Recognition -->
     <section class="py-16 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-slate-500 font-bold mb-8 uppercase tracking-widest text-sm">Recognized By India's Top Media</p>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Logos -->
                 <div class="flex items-center gap-2 text-2xl font-black text-slate-800">
                     <i class="fas fa-tv text-bull-600"></i> CNBC <span class="text-bull-600">AWAAZ</span>
                 </div>
@@ -1278,10 +1557,11 @@
         </div>
     </section>
 
-    <!-- Exclusive Bonus -->
+    <!-- Section C: Exclusive Bonus -->
     <section class="py-12 bg-gradient-to-r from-blue-50 via-white to-cyan-50 border-b border-blue-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl border-2 border-dashed border-accent-400 shadow-lg relative overflow-hidden">
+                <!-- Ribbon -->
                 <div class="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold px-8 py-1 rotate-45 translate-x-8 translate-y-4 shadow-sm">LIMITED OFFER</div>
                 
                 <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 flex-shrink-0 animate-bounce">
@@ -1299,8 +1579,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Learn and Earn -->
+     <!-- NEW SECTION: Learn and Earn (Videos about Apoorva Sharma & Market Logic) -->
     <section id="market-wisdom-section" class="py-20 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -1310,9 +1589,13 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-12 justify-items-center">
+                <!-- Video 1: Trading Loss Challenges -->
                 <div class="flex flex-col items-center w-full">
                     <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300 mx-auto video-secure-container">
+                        
+                        <!-- Mask to block Pop-out button (Increased size) -->
                         <div class="absolute top-0 right-0 w-24 h-24 z-20"></div>
+
                         <iframe 
                             id="wisdom-video-1"
                             sandbox="allow-scripts allow-same-origin"
@@ -1328,9 +1611,13 @@
                     </div>
                 </div>
 
+                <!-- Video 2: Trendline Subjectivity -->
                 <div class="flex flex-col items-center w-full">
                     <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300 mx-auto video-secure-container">
+                        
+                        <!-- Mask to block Pop-out button (Increased size) -->
                         <div class="absolute top-0 right-0 w-24 h-24 z-20"></div>
+
                         <iframe 
                             id="wisdom-video-2"
                             sandbox="allow-scripts allow-same-origin"
@@ -1349,7 +1636,7 @@
         </div>
     </section>
 
-    <!-- About Apoorva Photo -->
+    <!-- NEW SECTION: About Apoorva Sharma (Bada Photo Section - NO FRAME) -->
     <section id="apoorva-photo-section" class="py-20 bg-slate-50 border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -1358,10 +1645,12 @@
                 <p class="text-slate-500 text-lg">A new perspective on stock market discipline and analysis.</p>
             </div>
             
+            <!-- Added Frame Wrapper as requested -->
             <div class="bg-white rounded-[2.5rem] border-[6px] border-bull-100 p-8 md:p-12 shadow-2xl relative overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-12 items-center justify-items-center relative z-10">
+                    <!-- Left: BIG STABLE PHOTO -->
                     <div class="w-full flex justify-center lg:justify-end">
-                        <div class="relative w-full max-w-[500px]">
+                        <div class="relative w-full max-w-[500px]"> <!-- Increased width from 320 to 500 -->
                             <img 
                                 src="https://drive.google.com/thumbnail?id=17RXcz45huTHEdqws38doI8p8bL9XyCVK&sz=w1200" 
                                 alt="Apoorva Sharma Large" 
@@ -1370,9 +1659,13 @@
                         </div>
                     </div>
 
+                    <!-- Right: Video Reel Section -->
                     <div class="w-full flex justify-center lg:justify-start">
                         <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300 video-secure-container">
+                            
+                            <!-- Mask to block Pop-out button -->
                             <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
+
                             <iframe 
                                 id="new-reel-video-2"
                                 sandbox="allow-scripts allow-same-origin"
@@ -1389,7 +1682,7 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white border-y border-blue-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -1398,6 +1691,7 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
                 <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-100 shadow-sm relative hover:shadow-md transition-shadow">
                     <div class="text-yellow-400 text-sm mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="text-slate-600 italic mb-6">"Maine pehle bohot loss kiya tha, par Apoorva Ma'am ke levels follow karke maine apna sara loss recover kar liya. Best advisory service!"</p>
@@ -1409,6 +1703,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Review 2 -->
                 <div class="bg-cyan-50 p-6 rounded-2xl border-2 border-cyan-100 shadow-sm relative hover:shadow-md transition-shadow">
                     <div class="text-yellow-400 text-sm mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="text-slate-600 italic mb-6">"Lifetime plan is a steal! ₹3400 mein zindagi bhar ke liye support. Inke jackpot calls next level hote hain."</p>
@@ -1420,6 +1715,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Review 3 -->
                 <div class="bg-sky-50 p-6 rounded-2xl border-2 border-sky-100 shadow-sm relative hover:shadow-md transition-shadow">
                     <div class="text-yellow-400 text-sm mb-4"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p class="text-slate-600 italic mb-6">"Support team bahut acchi hai. Trade lene se pehle aur baad mein pura guide karte hain. Highly recommended."</p>
@@ -1435,7 +1731,7 @@
         </div>
     </section>
 
-    <!-- Us vs Others -->
+    <!-- NEW SECTION: Us vs Others (Moved Down) -->
     <section class="py-20 bg-slate-50 border-y border-blue-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -1444,6 +1740,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Others -->
                 <div class="bg-white p-8 rounded-2xl border-2 border-red-100 opacity-80 hover:opacity-100 transition-opacity">
                     <h3 class="text-2xl font-bold text-red-500 mb-6 flex items-center gap-3">
                         <i class="fas fa-times-circle"></i> Aam Telegram Channels
@@ -1456,6 +1753,7 @@
                     </ul>
                 </div>
 
+                <!-- Apex Option Trading Research -->
                 <div class="bg-white p-8 rounded-2xl border-2 border-bull-500 shadow-xl relative overflow-hidden transform md:-translate-y-2">
                     <div class="absolute top-0 right-0 bg-bull-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">WINNER</div>
                     <h3 class="text-2xl font-bold text-bull-600 mb-6 flex items-center gap-3">
@@ -1472,10 +1770,11 @@
         </div>
     </section>
 
-    <!-- Risk Disclosure -->
+    <!-- NEW SECTION: RISK DISCLOSURE & DISCLAIMER (Added below Apex vs Others) -->
     <section class="py-16 bg-white border-b border-blue-100">
         <div class="max-w-4xl mx-auto px-4">
             <div class="bg-red-50 border border-red-200 rounded-3xl p-8 md:p-12 shadow-sm relative overflow-hidden">
+                <!-- Background Watermark Icon -->
                 <div class="absolute -right-10 -top-10 text-red-100 opacity-60 pointer-events-none">
                     <i class="fas fa-exclamation-triangle text-9xl"></i>
                 </div>
@@ -1516,7 +1815,7 @@
         </div>
     </section>
 
-    <!-- Grievance Redressal -->
+    <!-- NEW SECTION: Grievance Redressal (Added below Risk Disclosure) -->
     <section class="py-10 bg-white border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="text-slate-500 font-bold tracking-widest uppercase text-sm bg-slate-100 px-3 py-1 rounded-lg">Support</span>
@@ -1526,6 +1825,7 @@
                 <p class="text-xl text-slate-700 font-bold mb-6">Clients can raise grievances via:</p>
                 
                 <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Email -->
                     <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-row items-center justify-center gap-6 hover:border-bull-400 transition-colors group">
                         <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
                             <i class="fas fa-envelope text-xl"></i>
@@ -1536,6 +1836,7 @@
                         </div>
                     </div>
                     
+                    <!-- Timeline -->
                     <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-row items-center justify-center gap-6 hover:border-bull-400 transition-colors group">
                         <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-bull-600 flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors">
                             <i class="fas fa-hourglass-half text-xl"></i>
@@ -1550,7 +1851,7 @@
         </div>
     </section>
 
-    <!-- Legal & Compliance -->
+    <!-- NEW SECTION: LEGAL & COMPLIANCE (Compact Side-by-Side) -->
     <section class="py-12 bg-slate-50 border-b border-blue-100">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-8">
@@ -1559,6 +1860,7 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <!-- Column 1: Privacy Policy -->
                 <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center text-bull-600 border border-blue-100">
@@ -1570,6 +1872,7 @@
                         We value your trust. Your personal and financial data is encrypted and never shared with third parties for marketing.
                     </p>
                     
+                    <!-- Collapsible Content -->
                     <div id="privacy-policy-content" class="hidden text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-3 mt-2 bg-slate-50 p-3 rounded-lg">
                         <p><strong>1. Data Usage:</strong> Collected strictly for KYC & Risk Profiling.</p>
                         <p><strong>2. Security:</strong> 256-bit Encryption employed.</p>
@@ -1581,6 +1884,7 @@
                     </button>
                 </div>
 
+                <!-- Column 2: Terms & SEBI Guidelines -->
                 <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center text-bull-600 border border-blue-100">
@@ -1592,6 +1896,7 @@
                         Advisory services are subject to regulatory norms. We adhere strictly to SEBI (Investment Advisers) Regulations, 2013.
                     </p>
 
+                    <!-- Collapsible Content -->
                     <div id="legal-content" class="hidden text-xs text-slate-500 space-y-2 border-t border-slate-100 pt-3 mt-2 bg-slate-50 p-3 rounded-lg">
                         <p><strong>1. Compliance:</strong> Fully compliant with SEBI RIA norms.</p>
                         <p><strong>2. KYC:</strong> Mandatory for all clients before service.</p>
@@ -1607,7 +1912,7 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- NEW SECTION 5: Final CTA Strip -->
     <section class="py-16 bg-gradient-to-r from-bull-600 via-blue-600 to-accent-600 relative overflow-hidden">
         <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
@@ -1624,6 +1929,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col gap-8 mb-12">
                 
+                <!-- NEW BRAND FRAME -->
                 <div class="bg-slate-800/60 p-6 rounded-2xl border border-bull-500/30 shadow-lg w-full">
                     <div class="flex items-center gap-3 mb-4">
                         <span class="text-xl md:text-2xl font-black text-white tracking-tight">APEX OPTION TRADING RESEARCH</span>
@@ -1632,6 +1938,7 @@
                         Apex Option Trading Research is a SEBI Registered Investment Advisory firm (INH000089203). We specialize in providing research-backed index option strategies with a strong focus on risk management and regulatory compliance</p>
                 </div>
 
+                <!-- REGULATORY DISCLOSURES -->
                 <div class="p-5 bg-slate-800/50 rounded-xl border border-slate-700 shadow-inner w-full">
                     <h5 class="text-bull-400 font-bold mb-3 text-xs uppercase tracking-widest border-b border-slate-600 pb-2 flex items-center gap-2">
                         <i class="fas fa-balance-scale"></i> Regulatory Disclosures
@@ -1643,6 +1950,7 @@
                     </div>
                 </div>
                 
+                <!-- Contact Us Section -->
                 <div class="bg-slate-800/40 p-6 rounded-2xl border border-slate-700 shadow-xl backdrop-blur-sm w-full">
                     <h4 class="text-white font-bold mb-6 text-lg flex items-center gap-3">
                         <span class="w-1 h-6 bg-bull-500 rounded-full"></span> Contact Us
@@ -1693,7 +2001,7 @@
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-    <!-- Scripts -->
+    <!-- Autoplay Scroll Script -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const videoFrames = [
@@ -1705,6 +2013,7 @@
                 { id: 'strategy-video-2', src: 'https://drive.google.com/file/d/1tX_eAVmKX8h0qHM73P9SOHb82xLw-7_w/preview' },
                 { id: 'psychology-video-1', src: 'https://drive.google.com/file/d/1I1Zdov2H8Cigvfz8czOcd2gYJP1ak3jW/preview' },
                 { id: 'psychology-video-2', src: 'https://drive.google.com/file/d/1Sgp1HvXoC6zHRVF4rKtcJzu2FZ3PrXKo/preview' },
+                { id: 'premium-peek-video-inner', src: 'https://drive.google.com/file/d/1krJSHTttwJTbrNftwVoXdQl_i4Dq57Kl/preview' },
                 { id: 'wisdom-video-1', src: 'https://drive.google.com/file/d/1krJSHTttwJTbrNftwVoXdQl_i4Dq57Kl/preview' },
                 { id: 'wisdom-video-2', src: 'https://drive.google.com/file/d/1LS4V5X24lfy9LNw2Jgeru1XiFlJ4ZJff/preview' },
                 { id: 'new-reel-video-2', src: 'https://drive.google.com/file/d/1ixQ_QVVHee3zpd-HSVjW95fSnji6OAwF/preview' }
@@ -1748,5 +2057,6 @@
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    
 </body>
 </html>
