@@ -54,25 +54,6 @@
         
         body { font-family: 'Inter', sans-serif; }
 
-        /* Google Translate Custom Styling */
-        .goog-te-gadget {
-            font-family: 'Inter', sans-serif !important;
-            color: #475569 !important;
-        }
-        .goog-te-gadget-simple {
-            background-color: #fff !important;
-            border: 1px solid #e2e8f0 !important;
-            padding: 8px 16px !important;
-            border-radius: 9999px !important;
-            font-size: 14px !important;
-            display: inline-block;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        /* Hide the Google top bar frame */
-        body { top: 0 !important; }
-        .goog-te-banner-frame { display: none !important; }
-
         /* 3D Button Styles - Now with Gradients */
         .btn-3d {
             transition: all 0.1s;
@@ -202,12 +183,6 @@
         <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/20 rounded-full blur-3xl -z-10 transform -translate-x-1/2 -translate-y-1/2"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 relative z-10">
-
-              <!-- GOOGLE TRANSLATE WIDGET ADDED HERE -->
-                <div class="mb-5 inline-block">
-                    <div id="google_translate_element"></div>
-                </div>
-                <br>
              
              <!-- Full Width Title Section (Moved out of grid) -->
              <div class="text-center lg:text-left mb-10 w-full">
@@ -2044,19 +2019,6 @@
                 });
             }
         });
-    </script>
-    <!-- GOOGLE TRANSLATE SCRIPT -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({
-              pageLanguage: 'en', 
-              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-              autoDisplay: false
-          }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    
+    </script>    
 </body>
 </html>
