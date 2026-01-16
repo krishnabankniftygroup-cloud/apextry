@@ -41,16 +41,28 @@
         .card-3d { transition: all 0.3s ease; box-shadow: 8px 8px 0px 0px rgba(37, 99, 235, 0.15); border: 2px solid #eff6ff; }
         .card-3d:hover { transform: translateY(-5px) translateX(-5px); box-shadow: 16px 16px 0px 0px rgba(37, 99, 235, 0.2); border-color: #3b82f6; }
         .bg-grid-pattern { background-image: linear-gradient(to right, #eff6ff 1px, transparent 1px), linear-gradient(to bottom, #eff6ff 1px, transparent 1px); background-size: 40px 40px; }
-        .hero-title-gradient { background: linear-gradient(to right, #2563eb 0%, #06b6d4 30%, #2563eb 50%, #d946ef 70%, #2563eb 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-x 4s linear infinite; filter: drop-shadow(3px 3px 0px #1e3a8a) drop-shadow(5px 5px 2px rgba(0,0,0,0.2)); }
+        /* Updated Shadow: Reduced significantly */
+        .hero-title-gradient { background: linear-gradient(to right, #2563eb 0%, #06b6d4 30%, #2563eb 50%, #d946ef 70%, #2563eb 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-x 4s linear infinite; filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1)); }
         
         /* WHITE DIVIDER STYLE */
         .custom-shape-divider-bottom { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
-        .custom-shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 80px; }
+        .custom-shape-divider-bottom svg { 
+            position: relative; 
+            display: block; 
+            width: calc(100% + 1.3px); 
+            height: 150px; /* Increased height for stylish look */
+        }
         .custom-shape-divider-bottom .shape-fill { fill: #FFFFFF; } /* Matches About Section */
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
         .video-secure-container { position: relative; overflow: hidden; }
+        
+        /* New Fancy Font Class */
+        .font-fancy-3d {
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden font-sans">
@@ -67,7 +79,7 @@
                             <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Apex Option Trading Research</p>
                         </div>
                     </div>
-                    <a href="https://wa.me/919257444046?text=I%20M%20interested%20Tu%20join%20your%20free%20group" target="_blank" class="px-5 py-2 rounded-full font-bold flex items-center gap-2 text-xs md:text-sm border-2 border-green-500/80 bg-transparent text-green-600 hover:bg-green-50 hover:border-green-600 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://wa.me/919257444046?text=I%20M%20interested%20To%20join%20your%20free%20group" target="_blank" class="px-5 py-2 rounded-full font-bold flex items-center gap-2 text-xs md:text-sm border-2 border-green-500/80 bg-transparent text-green-600 hover:bg-green-50 hover:border-green-600 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300">
                         <i class="fab fa-whatsapp text-lg animate-pulse"></i> Join Free WhatsApp Group
                     </a>
                 </div>
@@ -91,7 +103,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Updated: Reduced Mobile Padding for Compact View) -->
+    <!-- Hero Section -->
     <section id="home" class="force-full-width bg-grid-pattern flex flex-col justify-center pt-24 pb-6 md:py-36 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-cyan-50">
         <div class="absolute top-20 right-0 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl -z-10 animate-float"></div>
         <div class="absolute bottom-20 left-0 w-72 h-72 bg-cyan-400/30 rounded-full blur-3xl -z-10"></div>
@@ -124,10 +136,12 @@
             </div>
         </div>
 
-        <!-- WHITE WAVE DIVIDER (To match About Section) -->
+        <!-- WHITE WAVE DIVIDER - STYLISH MULTI-LAYER DESIGN -->
         <div class="custom-shape-divider-bottom pointer-events-none">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V120H0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V120H0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V120H0Z" class="shape-fill"></path>
             </svg>
         </div>
     </section>
@@ -155,7 +169,7 @@
 
 
      <!-- 3. Meet Your Mentor (NO VIDEO) -->
-    <section id="about" class="py-0 bg-white">
+    <section class="py-0 bg-white">
         <div class="w-full"> 
             <div class="bg-gradient-to-b from-blue-50 to-white border-y-[8px] border-bull-600 py-8 px-4 md:px-20 flex flex-row items-center gap-2 md:gap-16 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-bull-100 rounded-full blur-3xl -z-10 opacity-50"></div>
@@ -195,7 +209,7 @@
         </div>
     </section>
 
- <!-- Why Choose Us (UPDATED: Top/Bottom Border Only, Single Line Header, Side-by-Side Content) -->
+     <!-- Why Choose Us (UPDATED: STACKED STRIPS NO SCROLL) -->
     <section class="py-20 bg-white">
         <!-- Full Width Frame Container (Touching Edges Left/Right) -->
         <div class="w-full border-y-4 border-x-0 border-bull-100 bg-white shadow-xl relative overflow-hidden py-10">
@@ -205,49 +219,54 @@
 
              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
-                <!-- Heading Strip (Straight, Single Line) -->
+                <!-- Heading Strip -->
                 <div class="text-center mb-8">
                     <div class="inline-block bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 text-white py-2 px-4 md:py-3 md:px-8 rounded-full shadow-lg border-2 border-white ring-4 ring-blue-50 max-w-full">
-                         <!-- text-[3.5vw] ensures it stays on one line on mobile -->
                          <h2 class="text-[3.5vw] md:text-3xl font-black tracking-wide uppercase font-fancy-3d whitespace-nowrap m-0">
                             ✨ Stock Market Se Paise Kaise Kamaye? ✨
                         </h2>
                     </div>
                 </div>
 
-                <!-- Content Container: Side-by-Side on Mobile (Horizontal Scroll) -->
-                <div class="flex flex-row md:grid md:grid-cols-3 gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+                <!-- Content Container: Vertical Stack on Mobile (No Scroll), Grid on Desktop -->
+                <div class="flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-8">
                     
                     <!-- Card 1 -->
-                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-blue-50 p-6 rounded-2xl relative overflow-hidden group border-blue-100 h-full">
-                        <div class="relative z-10 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl border-b-4 border-orange-700 flex items-center justify-center text-white mb-4 shadow-lg">
-                                <i class="fas fa-bullseye text-xl"></i>
+                    <div class="card-3d bg-blue-50 p-4 md:p-8 rounded-xl relative overflow-hidden group border-blue-100 flex flex-row md:flex-col items-center gap-4 text-left md:text-center">
+                        <div class="relative z-10 flex-shrink-0">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg md:rounded-xl border-b-4 border-orange-700 flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-handshake text-xl md:text-3xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Pin-Point Levels</h3>
-                            <p class="text-sm text-slate-600 font-medium">Proper Entry, Stoploss aur 3 Targets ke saath calls milti hain.</p>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="font-bold text-slate-900 text-sm md:text-2xl mb-1 uppercase tracking-tight">Join our service</h3>
+                            <p class="text-xs md:text-base text-slate-600 font-medium leading-tight">Become a member of our premium group.</p>
                         </div>
                     </div>
                     
                     <!-- Card 2 -->
-                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-green-50 p-6 rounded-2xl relative overflow-hidden group border-green-100 h-full">
-                        <div class="relative z-10 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl border-b-4 border-green-800 flex items-center justify-center text-white mb-4 shadow-lg">
-                                <i class="fas fa-mobile-alt text-xl"></i>
+                    <div class="card-3d bg-green-50 p-4 md:p-8 rounded-xl relative overflow-hidden group border-green-100 flex flex-row md:flex-col items-center gap-4 text-left md:text-center">
+                        <div class="relative z-10 flex-shrink-0">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-lg md:rounded-xl border-b-4 border-green-800 flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-chart-line text-xl md:text-3xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Instant Alerts</h3>
-                            <p class="text-sm text-slate-600 font-medium">Trade aate hi WhatsApp aur Telegram par turant notification.</p>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="font-bold text-slate-900 text-sm md:text-2xl mb-1 uppercase tracking-tight">Trade on our levels</h3>
+                            <p class="text-xs md:text-base text-slate-600 font-medium leading-tight">Follow the exact entry/exit levels we provide.</p>
                         </div>
                     </div>
                     
                     <!-- Card 3 -->
-                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-cyan-50 p-6 rounded-2xl relative overflow-hidden group border-cyan-100 h-full">
-                        <div class="relative z-10 flex flex-col items-center text-center">
-                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl border-b-4 border-cyan-800 flex items-center justify-center text-white mb-4 shadow-lg">
-                                <i class="fas fa-user-shield text-xl"></i>
+                    <div class="card-3d bg-cyan-50 p-4 md:p-8 rounded-xl relative overflow-hidden group border-cyan-100 flex flex-row md:flex-col items-center gap-4 text-left md:text-center">
+                        <div class="relative z-10 flex-shrink-0">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg md:rounded-xl border-b-4 border-cyan-800 flex items-center justify-center text-white shadow-lg">
+                                <i class="fas fa-wallet text-xl md:text-3xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Capital Protection</h3>
-                            <p class="text-sm text-slate-600 font-medium">Humara pehla rule hai: 'Save Capital' with small stoploss.</p>
+                        </div>
+                        <div class="relative z-10">
+                            <h3 class="font-bold text-slate-900 text-sm md:text-2xl mb-1 uppercase tracking-tight">Book profits</h3>
+                            <p class="text-xs md:text-base text-slate-600 font-medium leading-tight">Execute trades and secure your profits consistently.</p>
                         </div>
                     </div>
 
@@ -555,13 +574,14 @@
     </section>
 
      <!--Premium Group Kaise Join Karein? (UPDATED WITH NEW TEXT & UNIFORM 3D DESIGN) -->
-    <section class="bg-white border-x-[6px] md:border-x-[15px] border-red-600 relative overflow-hidden text-slate-900">
+    <section id="process" class="bg-white border-x-[6px] md:border-x-[15px] border-red-600 relative overflow-hidden text-slate-900 scroll-mt-20">
         
         <!-- Heading Strip (Matching Section 6) -->
         <div class="w-full bg-gradient-to-r from-red-600 via-orange-600 to-red-700 py-6 md:py-12 shadow-xl shimmer-effect border-b-4 border-yellow-400">
             <div class="px-4 text-center">
                 <h2 class="text-2xl md:text-4xl lg:text-6xl font-black text-yellow-400 uppercase tracking-wide whitespace-nowrap text-3d-yellow">
-                    Premium Group Kaise Join Karein? 
+                    HOW TO JOIN PREMIUM 
+ 
                 </h2>
             </div>
         </div>
@@ -613,7 +633,7 @@
     </section>
 
     <!-- 13. Pricing Section (UPDATED: Distinct 3D Colors & Sizes) -->
-    <section id="pricing" class="py-12 md:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="pricing" class="py-12 md:py-24 bg-slate-900 text-white relative overflow-hidden scroll-mt-24">
         <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#06b6d4 1px, transparent 1px); background-size: 30px 30px;"></div>
         
         <div class="w-[98%] max-w-[1400px] mx-auto px-1 md:px-2 relative z-10">
@@ -870,7 +890,7 @@
 
    
     <!-- Section 15: Pricing Section (UPDATED: SLEEK THIN STRIP WITH 3D BUTTONS) -->
-    <section id="pricing" class="py-12 md:py-20 bg-slate-900 border-y-8 border-indigo-700 relative overflow-hidden">
+    <section class="py-12 md:py-20 bg-slate-900 border-y-8 border-indigo-700 relative overflow-hidden">
         <div class="max-w-[1600px] mx-auto px-4 text-center">
 
             <!-- The Thin Strip Container -->
@@ -990,6 +1010,7 @@
                             <h2 class="text-3xl md:text-5xl font-black text-slate-900 mt-4 mb-6">Our Advisory Process</h2>
                             <p class="text-xl text-slate-600 font-medium mb-10 leading-relaxed">Our advisory process is based on risk profiling, suitability, and disciplined execution — <span class="text-red-500 font-bold">not on shortcuts.</span></p>
                             <div class="space-y-4">
+                                <!-- ID moved to How To Join section -->
                                 <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group"><div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">1</div><h4 class="font-bold text-slate-800 text-lg">Risk Assessment</h4></div>
                                 <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group"><div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">2</div><h4 class="font-bold text-slate-800 text-lg">Capital Suitability</h4></div>
                                 <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md hover:border-bull-300 transition-all group"><div class="w-12 h-12 bg-white text-bull-600 border border-bull-100 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 group-hover:bg-bull-600 group-hover:text-white transition-colors shadow-sm">3</div><h4 class="font-bold text-slate-800 text-lg">Strategy Explanation</h4></div>
@@ -1076,6 +1097,23 @@
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="reel-video-1" src="https://drive.google.com/file/d/1vXHVbcuDbzOiL3bOwwe9oQqoIg67afqW/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Market Insight 1" frameborder="0"></iframe>
                 </div>
+
+                <!-- Design 3: Electric Cyber Scan (High Tech Thin Strip) -->
+    <section class="w-full bg-indigo-900 py-3 md:py-5 border-y-2 border-cyan-400/50 relative overflow-hidden">
+        <div class="absolute left-0 top-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-scan"></div>
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-around gap-2 relative z-10">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                <h2 class="text-white font-black text-[10px] md:text-lg uppercase tracking-tight opacity-90">
+                    90% ACCURACY UNLOCKED
+                </h2>
+            </div>
+            <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-fancy-3d bg-cyan-400 border-cyan-700 text-indigo-900 px-6 md:px-12 py-2 md:py-3 rounded-sm font-black text-[10px] md:text-xl uppercase shadow-[0_5px_20px_rgba(34,211,238,0.4)]">
+                GO PREMIUM <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </section>
+
                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="reel-video-2" src="https://drive.google.com/file/d/1oUk5G5RSjr34IkkCirDkyi_SYMUSp8Tt/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Market Insight 2" frameborder="0"></iframe>
@@ -1111,6 +1149,23 @@
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="strategy-video-1" src="https://drive.google.com/file/d/1hW0vK3ydklysOC8TqaoTIu2TfZrog2eY/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Strategy Insight 1" frameborder="0"></iframe>
                 </div>
+
+<!-- Design 3: Electric Cyber Scan (High Tech Thin Strip) -->
+    <section class="w-full bg-indigo-900 py-3 md:py-5 border-y-2 border-cyan-400/50 relative overflow-hidden">
+        <div class="absolute left-0 top-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-scan"></div>
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-around gap-2 relative z-10">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                <h2 class="text-white font-black text-[10px] md:text-lg uppercase tracking-tight opacity-90">
+                    90% ACCURACY UNLOCKED
+                </h2>
+            </div>
+            <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-fancy-3d bg-cyan-400 border-cyan-700 text-indigo-900 px-6 md:px-12 py-2 md:py-3 rounded-sm font-black text-[10px] md:text-xl uppercase shadow-[0_5px_20px_rgba(34,211,238,0.4)]">
+                GO PREMIUM <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </section>
+
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="strategy-video-2" src="https://drive.google.com/file/d/1tX_eAVmKX8h0qHM73P9SOHb82xLw-7_w/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Strategy Insight 2" frameborder="0"></iframe>
@@ -1144,6 +1199,23 @@
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="psychology-video-1" src="https://drive.google.com/file/d/1I1Zdov2H8Cigvfz8czOcd2gYJP1ak3jW/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Psychology Insight 1" frameborder="0"></iframe>
                 </div>
+
+<!-- Design 3: Electric Cyber Scan (High Tech Thin Strip) -->
+    <section class="w-full bg-indigo-900 py-3 md:py-5 border-y-2 border-cyan-400/50 relative overflow-hidden">
+        <div class="absolute left-0 top-0 w-full h-[2px] bg-cyan-400 shadow-[0_0_10px_#22d3ee] animate-scan"></div>
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-around gap-2 relative z-10">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                <h2 class="text-white font-black text-[10px] md:text-lg uppercase tracking-tight opacity-90">
+                    90% ACCURACY UNLOCKED
+                </h2>
+            </div>
+            <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-fancy-3d bg-cyan-400 border-cyan-700 text-indigo-900 px-6 md:px-12 py-2 md:py-3 rounded-sm font-black text-[10px] md:text-xl uppercase shadow-[0_5px_20px_rgba(34,211,238,0.4)]">
+                GO PREMIUM <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </section>
+
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] border-slate-900 bg-black w-full max-w-[300px] aspect-[9/16] group transform hover:scale-[1.02] transition-transform duration-300">
                     <div class="absolute top-0 right-0 w-20 h-20 z-20"></div>
                     <iframe id="psychology-video-2" src="https://drive.google.com/file/d/1Sgp1HvXoC6zHRVF4rKtcJzu2FZ3PrXKo/preview" class="absolute inset-0 w-full h-full object-cover" allow="autoplay; encrypted-media; fullscreen" title="Psychology Insight 2" frameborder="0"></iframe>
@@ -1317,8 +1389,8 @@
     </section>
 
      <!-- Section 10: Pricing -->
-    <section id="pricing" class="py-24 bg-slate-900 text-white relative overflow-hidden z-10 border-b border-slate-800">
-        <div class="page-container px-4 relative z-10">
+    <section id="pricing-bottom" class="py-24 bg-slate-900 text-white relative overflow-hidden z-10 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-24">
                 <h2 class="text-4xl md:text-8xl font-black mb-8 uppercase tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40 leading-none">Premium Plans 🚀</h2>
                 <p class="text-blue-300 text-xl md:text-3xl font-black uppercase tracking-widest italic text-center leading-tight">Recover fees in just 1 jackpot trade.</p>
@@ -1368,78 +1440,105 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-bull-900 pt-16 pb-8 border-t-8 border-bull-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Footer (FIXED: Absolute Bottom, Clean End) -->
+    <footer class="bg-blue-600 pt-16 border-t-8 border-blue-800 text-white w-full relative z-20 m-0 p-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
             <div class="flex flex-col gap-8 mb-12">
-                <div class="bg-bull-800/60 p-6 rounded-2xl border border-bull-500/30 shadow-lg w-full">
-                    <div class="flex items-center gap-3 mb-4"><span class="text-xl md:text-2xl font-black text-white tracking-tight">APEX OPTION TRADING RESEARCH</span></div>
-                    <p class="text-blue-100 leading-relaxed font-medium">Apex Option Trading Research is a SEBI Registered Investment Advisory firm (INH000089203). We specialize in providing research-backed index option strategies with a strong focus on risk management and regulatory compliance</p>
+                <!-- Brand Info -->
+                <div class="bg-blue-700 p-6 rounded-2xl border border-blue-500 shadow-lg w-full">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-xl md:text-2xl font-black text-white tracking-tight">APEX OPTION TRADING RESEARCH</span>
+                    </div>
+                    <p class="text-blue-100 leading-relaxed font-medium">Apex Option Trading Research is a SEBI Registered Investment Advisory firm (INH000089203). We specialize in providing research-backed index option strategies with a strong focus on risk management and regulatory compliance.</p>
                 </div>
-                <div class="p-5 bg-bull-800/50 rounded-xl border border-bull-700 shadow-inner w-full">
-                    <h5 class="text-bull-300 font-bold mb-3 text-xs uppercase tracking-widest border-b border-bull-700 pb-2 flex items-center gap-2"><i class="fas fa-balance-scale"></i> Regulatory Disclosures</h5>
-                    <div class="text-[10px] md:text-xs text-blue-200 space-y-2 leading-relaxed text-justify font-medium">
+
+                <!-- Regulatory Info -->
+                <div class="p-5 bg-blue-700 rounded-xl border border-blue-500 shadow-lg w-full">
+                    <h5 class="text-blue-200 font-bold mb-3 text-xs uppercase tracking-widest border-b border-blue-500 pb-2 flex items-center gap-2"><i class="fas fa-balance-scale"></i> Regulatory Disclosures</h5>
+                    <div class="text-[11px] md:text-xs text-blue-100 space-y-2 leading-relaxed text-justify font-medium">
                         <p><strong class="text-white">SEBI Registration No:</strong> INH000089203 (Individual Investment Adviser)</p>
                         <p class="text-blue-100"><strong>Standard Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the related documents carefully before investing.</p>
                         <p>Registration granted by SEBI, membership of BASL, and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.</p>
                     </div>
                 </div>
-                <div class="bg-bull-800/40 p-6 rounded-2xl border border-bull-700 shadow-xl backdrop-blur-sm w-full">
-                    <h4 class="text-white font-bold mb-6 text-lg flex items-center gap-3"><span class="w-1 h-6 bg-bull-400 rounded-full"></span> Contact Us</h4>
+
+                <!-- Contact Info -->
+                <div class="bg-blue-700 p-6 rounded-2xl border border-blue-500 shadow-lg w-full">
+                    <h4 class="text-white font-bold mb-6 text-lg flex items-center gap-3"><span class="w-1 h-6 bg-white rounded-full"></span> Contact Us</h4>
                     <div class="space-y-4">
-                        <div class="bg-bull-900 p-4 rounded-xl border border-bull-700 hover:border-bull-500 transition-colors group"><h5 class="text-bull-300 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-bull-800 pb-2">Head Office</h5><div class="flex items-start gap-3 text-blue-200"><div class="mt-1 w-6 h-6 rounded bg-bull-800 flex items-center justify-center text-bull-400 flex-shrink-0"><i class="fas fa-map-marker-alt text-xs"></i></div><span class="text-sm font-medium leading-relaxed">Office No. 601, 6th Floor, Shelton Cubix, Sector 15, CBD Belapur, Navi Mumbai – 400614</span></div></div>
-                        <div class="bg-bull-900 p-4 rounded-xl border border-bull-700 hover:border-green-500 transition-colors group"><h5 class="text-green-400 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-bull-800 pb-2">Get In Touch</h5><ul class="space-y-3"><li class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-bull-800 flex items-center justify-center text-green-500 flex-shrink-0"><i class="fab fa-whatsapp text-xs"></i></div><span class="text-blue-200 text-sm font-bold">+91 9257444046</span></li><li class="flex items-center gap-3"><div class="w-6 h-6 rounded bg-bull-800 flex items-center justify-center text-green-500 flex-shrink-0"><i class="fas fa-envelope text-xs"></i></div><span class="text-blue-200 text-xs font-medium break-all">support@apexoptiontradingresearch.com</span></li></ul></div>
+                        <!-- Head Office -->
+                        <div class="bg-blue-800 p-4 rounded-xl border border-blue-600 hover:border-white transition-colors group">
+                            <h5 class="text-blue-300 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-blue-600 pb-2">Head Office</h5>
+                            <div class="flex items-start gap-3 text-blue-100">
+                                <div class="mt-1 w-6 h-6 rounded bg-blue-600 border border-blue-400 flex items-center justify-center text-white flex-shrink-0"><i class="fas fa-map-marker-alt text-xs"></i></div>
+                                <span class="text-sm font-medium leading-relaxed">Office No. 601, 6th Floor, Shelton Cubix, Sector 15, CBD Belapur, Navi Mumbai – 400614</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Get In Touch -->
+                        <div class="bg-blue-800 p-4 rounded-xl border border-blue-600 hover:border-white transition-colors group">
+                            <h5 class="text-green-300 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-blue-600 pb-2">Get In Touch</h5>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded bg-blue-600 border border-blue-400 flex items-center justify-center text-green-300 flex-shrink-0"><i class="fab fa-whatsapp text-xs"></i></div>
+                                    <span class="text-white text-sm font-bold">+91 9257444046</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <div class="w-6 h-6 rounded bg-blue-600 border border-blue-400 flex items-center justify-center text-green-300 flex-shrink-0"><i class="fas fa-envelope text-xs"></i></div>
+                                    <span class="text-blue-100 text-xs font-medium break-all">support@apexoptiontradingresearch.com</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-bull-800 pt-8 text-center"><p class="text-blue-300 text-sm">&copy; 2026 Apex Option Trading Research. All rights reserved.</p></div>
+            
+            <!-- Copyright (Last Element) -->
+            <div class="border-t border-blue-500 py-8 text-center bg-blue-600">
+                <p class="text-blue-200 text-sm m-0">&copy; 2026 Apex Option Trading Research. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/919257444046" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl z-50 hover:bg-green-600 transition-all hover:scale-110 animate-bounce">
-        <i class="fab fa-whatsapp text-3xl"></i>
+    <!-- RESTORED: Floating WhatsApp Button (Fixed Bottom-Right) -->
+    <a href="https://wa.me/919257444046?text=Hello%20Apex%20Team,%20I%20want%20to%20join%20premium" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_4px_14px_rgba(0,0,0,0.4)] hover:shadow-[0_6px_20px_rgba(34,197,94,0.6)] transition-all duration-300 hover:-translate-y-2 animate-bounce border-2 border-white">
+        <i class="fab fa-whatsapp text-4xl"></i>
     </a>
 
-    <!-- Autoplay Scroll Script -->
+    <!-- Scripts -->
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('menu-btn').querySelector('i');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                btn.classList.remove('fa-times');
+                btn.classList.add('fa-bars');
+            } else {
+                btn.classList.remove('fa-bars');
+                btn.classList.add('fa-times');
+            }
+        }
         document.addEventListener("DOMContentLoaded", function() {
             const videoFrames = [
                 { id: 'ethical-video', src: 'https://drive.google.com/file/d/19B4dhj3IXUk8R0p-pAlIhnab68x4du69/preview' },
-                { id: 'methodology-video', src: 'https://drive.google.com/file/d/15kEwFj1GnP36AbLtXeOKnzjKN-Wg_7e_/preview' },
-                { id: 'reel-video-1', src: 'https://drive.google.com/file/d/1vXHVbcuDbzOiL3bOwwe9oQqoIg67afqW/preview' },
-                { id: 'reel-video-2', src: 'https://drive.google.com/file/d/1oUk5G5RSjr34IkkCirDkyi_SYMUSp8Tt/preview' },
                 { id: 'strategy-video-1', src: 'https://drive.google.com/file/d/1hW0vK3ydklysOC8TqaoTIu2TfZrog2eY/preview' },
-                { id: 'strategy-video-2', src: 'https://drive.google.com/file/d/1tX_eAVmKX8h0qHM73P9SOHb82xLw-7_w/preview' },
-                { id: 'psychology-video-1', src: 'https://drive.google.com/file/d/1I1Zdov2H8Cigvfz8czOcd2gYJP1ak3jW/preview' },
-                { id: 'psychology-video-2', src: 'https://drive.google.com/file/d/1Sgp1HvXoC6zHRVF4rKtcJzu2FZ3PrXKo/preview' },
-                { id: 'wisdom-video-1', src: 'https://drive.google.com/file/d/1krJSHTttwJTbrNftwVoXdQl_i4Dq57Kl/preview' },
-                { id: 'wisdom-video-2', src: 'https://drive.google.com/file/d/1LS4V5X24lfy9LNw2Jgeru1XiFlJ4ZJff/preview' },
-                { id: 'new-reel-video-2', src: 'https://drive.google.com/file/d/1ixQ_QVVHee3zpd-HSVjW95fSnji6OAwF/preview' }
+                { id: 'strategy-video-2', src: 'https://drive.google.com/file/d/1tX_eAVmKX8h0qHM73P9SOHb82xLw-7_w/preview' }
             ];
-            
             if ("IntersectionObserver" in window) {
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         const iframe = entry.target;
-                        const originalSrc = iframe.getAttribute('data-src');
-                        
-                        if (entry.isIntersecting) {
-                            if (!iframe.src || iframe.src === 'about:blank') {
-                                iframe.src = originalSrc; 
-                            }
-                        } else {
-                            iframe.src = 'about:blank';
+                        const originalSrc = iframe.getAttribute('src');
+                        if (entry.isIntersecting && !iframe.getAttribute('loaded')) {
+                            iframe.src = originalSrc; 
+                            iframe.setAttribute('loaded', 'true');
                         }
                     });
-                }, { threshold: 0.2 });
-                
+                }, { threshold: 0.1 });
                 videoFrames.forEach(video => {
                     const el = document.getElementById(video.id);
-                    if (el) {
-                        el.setAttribute('data-src', video.src);
-                        observer.observe(el);
-                    }
+                    if (el) observer.observe(el);
                 });
             }
         });
