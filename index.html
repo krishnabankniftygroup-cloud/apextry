@@ -11,39 +11,22 @@
             theme: {
                 extend: {
                     colors: {
-                        bull: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                        },
-                        accent: {
-                            50: '#ecfeff',
-                            500: '#06b6d4',
-                            600: '#0891b2',
-                        }
+                        bull: { 50: '#eff6ff', 100: '#dbeafe', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                        accent: { 50: '#ecfeff', 500: '#06b6d4', 600: '#0891b2' }
                     },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'scroll': 'scroll 20s linear infinite',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient-x': 'gradient-x 3s ease infinite',
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        'gradient-x': {
+                            '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+                            '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
                         },
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-100%)' },
-                        }
                     }
                 }
             }
@@ -51,70 +34,22 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
         body { font-family: 'Inter', sans-serif; }
-
-        .btn-3d {
-            transition: all 0.1s;
-            border-bottom-width: 6px;
-        }
-        .btn-3d:active {
-            transform: translateY(4px);
-            border-bottom-width: 2px;
-            box-shadow: none !important;
-        }
-
-        .card-3d {
-            transition: all 0.3s ease;
-            box-shadow: 8px 8px 0px 0px rgba(37, 99, 235, 0.15);
-            border: 2px solid #eff6ff;
-        }
-        .card-3d:hover {
-            transform: translateY(-5px) translateX(-5px);
-            box-shadow: 16px 16px 0px 0px rgba(37, 99, 235, 0.2);
-            border-color: #3b82f6;
-        }
-
-        .hero-colorful-text {
-            background: linear-gradient(to right, #7c3aed, #db2777, #ea580c, #ca8a04);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
-        }
-
-        .hero-paragraph-colorful {
-            background: linear-gradient(to right, #2563eb, #9333ea, #db2777);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-        }
-
-        .custom-shape-divider-bottom-1698083960 {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            transform: rotate(180deg);
-        }
-
-        .custom-shape-divider-bottom-1698083960 svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 100px;
-        }
-
-        .custom-shape-divider-bottom-1698083960 .shape-fill {
-            fill: #FFFFFF;
-        }
+        .force-full-width { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; }
+        .btn-3d { transition: all 0.1s; border-bottom-width: 6px; }
+        .btn-3d:active { transform: translateY(4px); border-bottom-width: 2px; box-shadow: none !important; }
+        .card-3d { transition: all 0.3s ease; box-shadow: 8px 8px 0px 0px rgba(37, 99, 235, 0.15); border: 2px solid #eff6ff; }
+        .card-3d:hover { transform: translateY(-5px) translateX(-5px); box-shadow: 16px 16px 0px 0px rgba(37, 99, 235, 0.2); border-color: #3b82f6; }
+        .bg-grid-pattern { background-image: linear-gradient(to right, #eff6ff 1px, transparent 1px), linear-gradient(to bottom, #eff6ff 1px, transparent 1px); background-size: 40px 40px; }
+        .hero-title-gradient { background: linear-gradient(to right, #2563eb 0%, #06b6d4 30%, #2563eb 50%, #d946ef 70%, #2563eb 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-x 4s linear infinite; filter: drop-shadow(3px 3px 0px #1e3a8a) drop-shadow(5px 5px 2px rgba(0,0,0,0.2)); }
+        
+        /* WHITE DIVIDER STYLE */
+        .custom-shape-divider-bottom { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+        .custom-shape-divider-bottom svg { position: relative; display: block; width: calc(100% + 1.3px); height: 80px; }
+        .custom-shape-divider-bottom .shape-fill { fill: #FFFFFF; } /* Matches About Section */
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        
         .video-secure-container { position: relative; overflow: hidden; }
     </style>
 </head>
@@ -132,99 +67,92 @@
                             <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Apex Option Trading Research</p>
                         </div>
                     </div>
-                    
                     <a href="https://wa.me/919257444046?text=I%20M%20interested%20Tu%20join%20your%20free%20group" target="_blank" class="px-5 py-2 rounded-full font-bold flex items-center gap-2 text-xs md:text-sm border-2 border-green-500/80 bg-transparent text-green-600 hover:bg-green-50 hover:border-green-600 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:-translate-y-1 transition-all duration-300">
                         <i class="fab fa-whatsapp text-lg animate-pulse"></i> Join Free WhatsApp Group
                     </a>
                 </div>
-
                 <div class="hidden md:flex items-center gap-10">
                     <a href="#home" class="font-bold text-slate-600 hover:text-bull-600 transition">Home</a>
                     <a href="#about" class="font-bold text-slate-600 hover:text-bull-600 transition">About</a>
                     <a href="#process" class="font-bold text-slate-600 hover:text-bull-600 transition">Process</a>
                     <a href="#pricing" class="font-bold text-slate-600 hover:text-bull-600 transition">Plans</a>
                 </div>
-
-                <button class="md:hidden text-bull-600 text-2xl">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <button class="md:hidden text-bull-600 text-2xl" id="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-blue-100 absolute w-full left-0 top-20 shadow-xl transition-all duration-300">
+            <div class="flex flex-col px-6 py-4 space-y-4">
+                <a href="#home" class="font-bold text-slate-600 hover:text-bull-600 text-lg border-b border-slate-50 pb-2" onclick="toggleMenu()">Home</a>
+                <a href="#about" class="font-bold text-slate-600 hover:text-bull-600 text-lg border-b border-slate-50 pb-2" onclick="toggleMenu()">About</a>
+                <a href="#process" class="font-bold text-slate-600 hover:text-bull-600 text-lg border-b border-slate-50 pb-2" onclick="toggleMenu()">Process</a>
+                <a href="#pricing" class="font-bold text-slate-600 hover:text-bull-600 text-lg border-b border-slate-50 pb-2" onclick="toggleMenu()">Plans</a>
             </div>
         </div>
     </nav>
 
-    <!-- 1. Hero Section (NO VIDEO) -->
-    <section id="home" class="bg-grid-pattern min-h-screen flex flex-col justify-center pt-32 pb-32 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-cyan-50">
-        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl -z-10 animate-float"></div>
+    <!-- Hero Section (Updated: Reduced Mobile Padding for Compact View) -->
+    <section id="home" class="force-full-width bg-grid-pattern flex flex-col justify-center pt-24 pb-6 md:py-36 relative overflow-hidden bg-gradient-to-b from-white via-blue-50 to-cyan-50">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-blue-400/30 rounded-full blur-3xl -z-10 animate-float"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-cyan-400/30 rounded-full blur-3xl -z-10"></div>
         
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 relative z-10 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white border-2 border-blue-200 shadow-md mb-8 transform hover:scale-105 transition-all">
-                <span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span></span>
-                <span class="text-sm font-black tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-600 to-blue-500 uppercase">SEBI Registered Analyst: <span class="text-blue-700">INH000089203</span></span>
-            </div>
-            
-            <div class="w-full overflow-x-auto scrollbar-hide mb-2 pb-2">
-                <h1 class="font-black leading-tight w-max mx-auto lg:mx-0">
-                    <span class="block text-[2.2rem] md:text-[3.5rem] lg:text-[5rem] tracking-wide uppercase whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-indigo-600" 
-                          style="filter: drop-shadow(3px 3px 0px #2563eb) drop-shadow(6px 6px 2px rgba(0,0,0,0.2)); transform: perspective(500px) rotateX(5deg);">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8 md:mb-16 relative z-10 text-center">
+             <div class="mb-2 md:mb-8 w-full mt-1 md:mt-8">
+                <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white border-2 border-blue-100 shadow-md transform hover:scale-105 transition-transform cursor-default mb-2 md:mb-6 whitespace-nowrap">
+                    <span class="relative flex h-3 w-3 flex-shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span></span>
+                    <span class="text-[10px] sm:text-xs font-bold tracking-wide text-slate-700 uppercase">SEBI Registered: <span class="text-bull-600">INH000089203</span></span>
+                </div>
+                <h1 class="font-black leading-tight w-full mx-auto">
+                    <span class="block text-[5.5vw] md:text-[5vw] lg:text-[4.2rem] whitespace-nowrap tracking-tighter uppercase hero-title-gradient">
                         APEX OPTION TRADING RESEARCH
                     </span>
                 </h1>
             </div>
-
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
-                <div class="space-y-8">
-                    <p class="text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed text-slate-900 font-bold">
-                        Join India's Most Trusted Premium Group led by Apoorva Sharma. We provide Nifty & Bank Nifty sure-shot levels with 90% accuracy.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-                        <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-3d bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 border-blue-800 text-white px-10 py-4 rounded-2xl font-bold text-xl shadow-xl hover:brightness-110 hover:shadow-blue-200/50">Start Profit Journey <i class="fas fa-arrow-right ml-2"></i></a>
-                        
-                        <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-3d bg-white border-2 border-blue-300 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-cyan-600 px-8 py-4 rounded-2xl font-black text-xl flex items-center justify-center gap-3 hover:bg-blue-50 border-b-4 hover:border-blue-400">
-                            <i class="fab fa-whatsapp text-blue-500"></i> Join Premium Group
-                        </a>
-                    </div>
-                </div>
-                <div class="relative hidden lg:block perspective-1000">
-                    <div class="relative z-10 bg-white p-3 rounded-3xl border-4 border-blue-200 shadow-2xl transform rotate-2">
-                        <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800" alt="Blue Trading Chart" class="rounded-2xl w-full object-cover h-[450px]">
-                    </div>
+            <div class="space-y-4 md:space-y-8 relative z-10 max-w-3xl mx-auto">
+                <p class="text-lg md:text-xl text-slate-600 font-medium leading-relaxed">
+                    Join India's Most Trusted <strong>Premium Group</strong> led by Apoorva Sharma. Hum provide karte hain <strong>Nifty & Bank Nifty</strong> ke sure-shot levels with 90% accuracy.
+                </p>
+                <div class="flex flex-row gap-3 sm:gap-5 justify-center w-full px-2">
+                    <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-3d flex-1 sm:flex-none bg-gradient-to-r from-bull-600 to-accent-600 border-bull-800 text-white px-3 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-xl flex items-center justify-center gap-2 hover:shadow-xl hover:brightness-110 whitespace-nowrap">
+                        Start Journey <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="btn-3d flex-1 sm:flex-none bg-gradient-to-r from-green-500 to-emerald-600 border-green-700 text-white px-3 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-xl flex items-center justify-center gap-2 hover:from-green-400 hover:to-emerald-500 shadow-xl hover:shadow-green-200 transition-all relative overflow-hidden group whitespace-nowrap">
+                        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        <i class="fab fa-whatsapp text-lg sm:text-4xl"></i> <span class="relative z-10">Join Premium</span>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="custom-shape-divider-bottom-1698083960"><svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path></svg></div>
+
+        <!-- WHITE WAVE DIVIDER (To match About Section) -->
+        <div class="custom-shape-divider-bottom pointer-events-none">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
-    <!-- UPDATED: About Apex Section (Strips are now Side-by-Side) -->
-    <section class="py-16 bg-white relative z-20">
+    <!-- About Apex Section (RESTORED - Immediately after Hero) -->
+    <section id="about" class="py-16 bg-white relative z-20 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 mb-8">About Apex Option Trading Research</h2>
+            <h2 class="text-[4.5vw] md:text-5xl font-black text-slate-900 mb-8 whitespace-nowrap tracking-tight">About Apex Option Trading Research</h2>
             <div class="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed max-w-5xl">
-                <p>
-                    <span class="text-blue-600 font-bold">Apex Option Trading Research</span> is a SEBI Registered Investment Advisory firm founded by <span class="font-bold text-slate-900 border-b-2 border-blue-200">Ms. Apoorva Sharma</span>, focused exclusively on Index Options Advisory services.
-                </p>
-                <p>
-                    Our objective is to help clients make informed decisions through structured research, disciplined strategies, and robust risk management practices. We believe in transparency, compliance, and long-term client interest.
-                </p>
+                <p><span class="text-blue-600 font-bold">Apex Option Trading Research</span> is a SEBI Registered Investment Advisory firm founded by <span class="font-bold text-slate-900 border-b-2 border-blue-200">Ms. Apoorva Sharma</span>.</p>
+                <p>Our objective is to help clients make informed decisions through structured research, disciplined strategies, and robust risk management practices.</p>
             </div>
-
-            <!-- Side by Side Strips (Patti) -->
             <div class="grid grid-cols-2 md:grid-cols-2 gap-4 mt-12 max-w-4xl">
                 <div class="bg-blue-50 border-2 border-blue-200 p-4 md:p-6 rounded-2xl flex flex-col md:flex-row items-center gap-2 md:gap-4 shadow-sm hover:shadow-md transition-shadow text-center md:text-left h-full">
-                    <div class="w-10 h-10 md:w-14 md:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg md:text-2xl flex-shrink-0">
-                        <i class="fas fa-certificate"></i>
-                    </div>
+                    <div class="w-10 h-10 md:w-14 md:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg md:text-2xl flex-shrink-0"><i class="fas fa-certificate"></i></div>
                     <span class="font-black text-blue-900 text-sm md:text-2xl tracking-tight leading-tight">SEBI Compliant</span>
                 </div>
-                
                 <div class="bg-green-50 border-2 border-green-200 p-4 md:p-6 rounded-2xl flex flex-col md:flex-row items-center gap-2 md:gap-4 shadow-sm hover:shadow-md transition-shadow text-center md:text-left h-full">
-                    <div class="w-10 h-10 md:w-14 md:h-14 bg-green-600 text-white rounded-full flex items-center justify-center text-lg md:text-2xl flex-shrink-0">
-                        <i class="fas fa-microscope"></i>
-                    </div>
+                    <div class="w-10 h-10 md:w-14 md:h-14 bg-green-600 text-white rounded-full flex items-center justify-center text-lg md:text-2xl flex-shrink-0"><i class="fas fa-microscope"></i></div>
                     <span class="font-black text-green-900 text-sm md:text-2xl tracking-tight leading-tight">Research Backed</span>
                 </div>
             </div>
         </div>
     </section>
+
 
      <!-- 3. Meet Your Mentor (NO VIDEO) -->
     <section id="about" class="py-0 bg-white">
@@ -267,93 +195,120 @@
         </div>
     </section>
 
+ <!-- Why Choose Us (UPDATED: Top/Bottom Border Only, Single Line Header, Side-by-Side Content) -->
+    <section class="py-20 bg-white">
+        <!-- Full Width Frame Container (Touching Edges Left/Right) -->
+        <div class="w-full border-y-4 border-x-0 border-bull-100 bg-white shadow-xl relative overflow-hidden py-10">
+             
+             <!-- Decorative Blob -->
+             <div class="absolute top-0 right-0 w-64 h-64 bg-bull-100 rounded-full blur-3xl opacity-50 -z-0 pointer-events-none"></div>
 
-        <!-- Section 4: Why Choose Us (UPDATED: 4-SIDE FRAME & THIN PATTI) -->
-    <section class="bg-white border-[6px] md:border-[10px] border-[#FFD700] relative overflow-hidden">
-        <!-- Thin Full-Width Yellow Strip -->
-        <div class="w-full bg-[#FFD700] py-3 md:py-4 shadow-sm mb-12">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <!-- Stylish Blue 3D Font Heading in One Line -->
-                <h2 class="text-xl md:text-3xl lg:text-5xl font-black text-blue-900 uppercase tracking-widest whitespace-nowrap text-3d-strip">
-                    Stock Market Se Paise Kaise Kamaye?
-                </h2>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-            <div class="text-center mb-12">
-                <p class="text-slate-600 max-w-4xl mx-auto text-lg md:text-2xl leading-relaxed font-black">
-                    Trading koi jua (gambling) nahi hai, ye ek serious business hai. Humaare premium members loss nahi, consistent profit karte hain kyunki hum <span class="text-bull-600 font-bold border-b-2 border-bull-200">Data, Logic aur Discipline</span> ko follow karte hain.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-3 gap-2 md:gap-8">
-                <!-- Card 1 -->
-                <div class="card-3d bg-blue-50 p-3 md:p-8 rounded-xl md:rounded-2xl relative overflow-hidden group border-blue-100 flex flex-col items-center text-center shadow-lg">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-yellow-200 rounded-full group-hover:scale-150 transition-transform duration-500 opacity-50 hidden md:block"></div>
-                    <div class="relative z-10 w-full">
-                        <div class="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg md:rounded-xl border-b-2 md:border-b-4 border-orange-700 flex items-center justify-center text-white mb-2 md:mb-6 shadow-lg mx-auto">
-                            <i class="fas fa-bullseye text-lg md:text-3xl"></i>
-                        </div>
-                        <h3 class="text-[11px] md:text-2xl font-bold text-slate-900 mb-1 md:mb-3 leading-tight">Pin-Point Levels</h3>
-                        <p class="text-[9px] md:text-base text-slate-600 font-medium leading-tight">Exact Entry, SL & Targets with Logic.</p>
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <!-- Heading Strip (Straight, Single Line) -->
+                <div class="text-center mb-8">
+                    <div class="inline-block bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 text-white py-2 px-4 md:py-3 md:px-8 rounded-full shadow-lg border-2 border-white ring-4 ring-blue-50 max-w-full">
+                         <!-- text-[3.5vw] ensures it stays on one line on mobile -->
+                         <h2 class="text-[3.5vw] md:text-3xl font-black tracking-wide uppercase font-fancy-3d whitespace-nowrap m-0">
+                            ✨ Stock Market Se Paise Kaise Kamaye? ✨
+                        </h2>
                     </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card-3d bg-green-50 p-3 md:p-8 rounded-xl md:rounded-2xl relative overflow-hidden group border-green-100 flex flex-col items-center text-center shadow-lg">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-green-200 rounded-full group-hover:scale-150 transition-transform duration-500 opacity-50 hidden md:block"></div>
-                    <div class="relative z-10 w-full">
-                        <div class="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-lg md:rounded-xl border-b-2 md:border-b-4 border-green-800 flex items-center justify-center text-white mb-2 md:mb-6 shadow-lg mx-auto">
-                            <i class="fas fa-mobile-alt text-lg md:text-3xl"></i>
+                <!-- Content Container: Side-by-Side on Mobile (Horizontal Scroll) -->
+                <div class="flex flex-row md:grid md:grid-cols-3 gap-5 overflow-x-auto md:overflow-visible pb-4 md:pb-0 snap-x snap-mandatory scrollbar-hide">
+                    
+                    <!-- Card 1 -->
+                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-blue-50 p-6 rounded-2xl relative overflow-hidden group border-blue-100 h-full">
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl border-b-4 border-orange-700 flex items-center justify-center text-white mb-4 shadow-lg">
+                                <i class="fas fa-bullseye text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Pin-Point Levels</h3>
+                            <p class="text-sm text-slate-600 font-medium">Proper Entry, Stoploss aur 3 Targets ke saath calls milti hain.</p>
                         </div>
-                        <h3 class="text-[11px] md:text-2xl font-bold text-slate-900 mb-1 md:mb-3 leading-tight">Instant Alerts</h3>
-                        <p class="text-[9px] md:text-base text-slate-600 font-medium leading-tight">WhatsApp lightning fast notifications.</p>
                     </div>
-                </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-green-50 p-6 rounded-2xl relative overflow-hidden group border-green-100 h-full">
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl border-b-4 border-green-800 flex items-center justify-center text-white mb-4 shadow-lg">
+                                <i class="fas fa-mobile-alt text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Instant Alerts</h3>
+                            <p class="text-sm text-slate-600 font-medium">Trade aate hi WhatsApp aur Telegram par turant notification.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="min-w-[85vw] md:min-w-0 snap-center card-3d bg-cyan-50 p-6 rounded-2xl relative overflow-hidden group border-cyan-100 h-full">
+                        <div class="relative z-10 flex flex-col items-center text-center">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl border-b-4 border-cyan-800 flex items-center justify-center text-white mb-4 shadow-lg">
+                                <i class="fas fa-user-shield text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Capital Protection</h3>
+                            <p class="text-sm text-slate-600 font-medium">Humara pehla rule hai: 'Save Capital' with small stoploss.</p>
+                        </div>
+                    </div>
 
-                <!-- Card 3 -->
-                <div class="card-3d bg-cyan-50 p-3 md:p-8 rounded-xl md:rounded-2xl relative overflow-hidden group border-cyan-100 flex flex-col items-center text-center shadow-lg">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-cyan-200 rounded-full group-hover:scale-150 transition-transform duration-500 opacity-50 hidden md:block"></div>
-                    <div class="relative z-10 w-full">
-                        <div class="w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-lg md:rounded-xl border-b-2 md:border-b-4 border-cyan-800 flex items-center justify-center text-white mb-2 md:mb-6 shadow-lg mx-auto">
-                            <i class="fas fa-user-shield text-lg md:text-3xl"></i>
-                        </div>
-                        <h3 class="text-[11px] md:text-2xl font-bold text-slate-900 mb-1 md:mb-3 leading-tight">Capital Safety</h3>
-                        <p class="text-[9px] md:text-base text-slate-600 font-medium leading-tight">Small Stoploss & Big Targets Focus.</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-       <!-- 4. Grow Rich Slowly (NO VIDEO) -->
-    <section class="py-20 bg-white border-b border-blue-100">
+     <!-- Grow Rich Slowly (UPDATED: Reduced Top Padding to Decrease Gap) -->
+    <section class="pt-4 pb-20 bg-white border-b border-blue-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-black text-slate-900 mt-4 mb-4">Chote Capital Ka Bada Dhamaka 💥</h2>
+                <h2 class="text-[4.5vw] md:text-4xl font-black text-slate-900 mt-4 mb-4 whitespace-nowrap">Chote Capital Ka Bada Dhamaka 💥</h2>
                 <p class="text-slate-500 text-lg">Agar aap rozana bas <span class="text-slate-900 font-bold">10% profit</span> bhi target karein, toh 10,000 kahan pahuch sakta hai dekhiye.</p>
             </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-center border-collapse">
+            
+            <div class="w-full overflow-x-auto pb-2">
+                <table class="w-full text-center border-collapse min-w-[350px]">
                     <thead>
                         <tr class="bg-bull-900 text-white">
-                            <th class="p-4 rounded-tl-xl">Month</th>
-                            <th class="p-4">Capital Start</th>
-                            <th class="p-4">Conservative Profit (Est.)</th>
-                            <th class="p-4 rounded-tr-xl">Month End Capital</th>
+                            <th class="p-2 md:p-4 rounded-tl-xl text-[11px] md:text-base font-bold">Month</th>
+                            <th class="p-2 md:p-4 text-[11px] md:text-base font-bold">Capital<br class="md:hidden">Start</th>
+                            <th class="p-2 md:p-4 text-[11px] md:text-base font-bold">Profit<br class="md:hidden">(Est.)</th>
+                            <th class="p-2 md:p-4 rounded-tr-xl text-[11px] md:text-base font-bold">Month<br class="md:hidden">End</th>
                         </tr>
                     </thead>
                     <tbody class="text-slate-700 font-medium">
-                        <tr class="bg-blue-50 border-b border-blue-200"><td class="p-4 font-bold">Month 1</td><td class="p-4">₹10,000</td><td class="p-4 text-green-600">+₹5,000</td><td class="p-4 font-bold">₹15,000</td></tr>
-                        <tr class="bg-white border-b border-blue-200"><td class="p-4 font-bold">Month 2</td><td class="p-4">₹15,000</td><td class="p-4 text-green-600">+₹7,500</td><td class="p-4 font-bold">₹22,500</td></tr>
-                        <tr class="bg-blue-50 border-b border-blue-200"><td class="p-4 font-bold">Month 3</td><td class="p-4">₹22,500</td><td class="p-4 text-green-600">+₹11,000</td><td class="p-4 font-bold">₹33,500</td></tr>
-                         <tr class="bg-white border-b border-blue-200"><td class="p-4 font-bold">Month 4</td><td class="p-4">₹33,500</td><td class="p-4 text-green-600">+₹16,000</td><td class="p-4 font-bold text-bull-600">₹49,500</td></tr>
-                        <tr class="bg-gradient-to-r from-bull-600 to-accent-600 text-white shadow-lg transform scale-105"><td class="p-4 font-bold rounded-l-xl">Month 6</td><td class="p-4">--</td><td class="p-4 font-bold">Consistency Power</td><td class="p-4 font-black text-xl rounded-r-xl">₹1,00,000+ 🚀</td></tr>
+                        <tr class="bg-blue-50 border-b border-blue-200">
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">Month 1</td>
+                            <td class="p-2 md:p-4 text-[12px] md:text-base">₹10,000</td>
+                            <td class="p-2 md:p-4 text-green-600 text-[12px] md:text-base">+₹5,000</td>
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">₹15,000</td>
+                        </tr>
+                        <tr class="bg-white border-b border-blue-200">
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">Month 2</td>
+                            <td class="p-2 md:p-4 text-[12px] md:text-base">₹15,000</td>
+                            <td class="p-2 md:p-4 text-green-600 text-[12px] md:text-base">+₹7,500</td>
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">₹22,500</td>
+                        </tr>
+                        <tr class="bg-blue-50 border-b border-blue-200">
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">Month 3</td>
+                            <td class="p-2 md:p-4 text-[12px] md:text-base">₹22,500</td>
+                            <td class="p-2 md:p-4 text-green-600 text-[12px] md:text-base">+₹11,000</td>
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">₹33,500</td>
+                        </tr>
+                         <tr class="bg-white border-b border-blue-200">
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">Month 4</td>
+                            <td class="p-2 md:p-4 text-[12px] md:text-base">₹33,500</td>
+                            <td class="p-2 md:p-4 text-green-600 text-[12px] md:text-base">+₹16,000</td>
+                            <td class="p-2 md:p-4 font-bold text-bull-600 text-[12px] md:text-base">₹49,500</td>
+                        </tr>
+                        <tr class="bg-gradient-to-r from-bull-600 to-accent-600 text-white shadow-lg transform md:scale-105">
+                            <td class="p-2 md:p-4 font-bold rounded-bl-xl md:rounded-l-xl text-[12px] md:text-base">Month 6</td>
+                            <td class="p-2 md:p-4 text-[12px] md:text-base">--</td>
+                            <td class="p-2 md:p-4 font-bold text-[12px] md:text-base">Power</td>
+                            <td class="p-2 md:p-4 font-black text-sm md:text-xl rounded-br-xl md:rounded-r-xl">₹1L+ 🚀</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="text-xs text-slate-400 mt-6 text-center italic">*Calculation based on consistent compounding. Market risk involved. Results may vary.</p>
+            <p class="text-[10px] md:text-xs text-slate-400 mt-6 text-center italic">*Calculation based on consistent compounding. Market risk involved. Results may vary.</p>
         </div>
     </section>
 
@@ -727,7 +682,7 @@
                             <li class="flex items-center gap-1 md:gap-3"><i class="fas fa-crown text-purple-400 text-[10px] md:text-xl"></i> <span class="leading-tight">No Renewal</span></li>
                             <li class="flex items-center gap-1 md:gap-3"><i class="fas fa-crown text-purple-400 text-[10px] md:text-xl"></i> <span class="leading-tight">Daily 2-3 Calls</span></li>
                             <li class="flex items-center gap-1 md:gap-3"><i class="fas fa-crown text-purple-400 text-[10px] md:text-xl"></i> <span class="leading-tight">Target & Stoploss</span></li>
-                            <li class="flex items-center gap-1 md:gap-3"><i class="fas fa-crown text-purple-400 text-[10px] md:text-xl"></i> <span class="leading-tight">Eucational Services</span></li>
+                            <li class="flex items-center gap-1 md:gap-3"><i class="fas fa-crown text-purple-400 text-[10px] md:text-xl"></i> <span class="leading-tight">Educational Services</span></li>
                         </ul>
                     </div>
                     <a href="https://pric.app/PremiumNiftyBanknifty" target="_blank" class="block w-full py-2 md:py-5 rounded-lg md:rounded-xl bg-purple-600 border-b-4 border-purple-800 text-white font-black text-center hover:bg-purple-500 active:border-b-0 active:translate-y-1 transition-all text-[10px] md:text-xl uppercase tracking-wider shadow-lg">Join Lifetime</a>
